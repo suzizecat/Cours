@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1275.6917"
+   height="379.77084"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="fig9_detente_joule.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3819"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="1077.393"
+     inkscape:cy="310.81653"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="-103.78571,326.76105"
+       id="guide2993" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-103.78571,-354.87507)"
+     sodipodi:insensitive="true">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 114.28571,434.14882 0,289.91378 220.21325,0 0,-224.25386 59.59901,0 0,224.25386 220.21325,0 0,-289.91378 z"
+       id="path2991"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:none;stroke:#0000a9;stroke-width:2.59119391px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 364.28571,426.6479 c 0,85 0,85 0,85"
+       id="path3001"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ff0000;fill-opacity:0.31372549;fill-rule:nonzero;stroke:#a90000;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 114.87397,578.92811 0,-144.28571 123.92857,0 123.92857,0 0,32.14285 0,32.14286 -14.64286,0 -14.64285,0 0,112.14286 0,112.14286 -109.28572,0 -109.28571,0 0,-144.28572 z"
+       id="path3773"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 868.9517,434.23213 0,289.91378 220.2132,0 0,-224.25386 59.5991,0 0,224.25386 220.2133,0 0,-289.91378 z"
+       id="path2991-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:#ff0000;fill-opacity:0.15686275;fill-rule:nonzero;stroke:#a90000;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 869.93717,579.29207 0,-144.28571 248.92853,0 248.9286,0 0,144.28571 0,144.28572 -108.9286,0 -108.9285,0 0,-112.14286 0,-112.14286 -30.7143,0 -30.7143,0 0,112.14286 0,112.14286 -109.28572,0 -109.28571,0 0,-144.28572 z"
+       id="path3807"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="fleches"
+     transform="translate(-0.00446,61.781182)">
+    <path
+       style="fill:#a90000;fill-opacity:1;fill-rule:nonzero;stroke:#0000a9;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 123.24699,41.794762 c -0.072,-0.122195 -4.8025,-16.714213 -4.8025,-16.844548 0,-0.06133 0.98437,0.87226 2.1875,2.074633 l 2.1875,2.186133 0,-31.8073506 0,-31.8073534 0.44643,0 0.44642,0 0,31.7857144 c 0,17.4821426 0.0298,31.7857146 0.0663,31.7857146 0.0365,0 1.02082,-0.953927 2.1875,-2.119839 1.16667,-1.165911 2.1212,-2.079973 2.12119,-2.03125 -6e-5,0.222085 -4.79736,16.851078 -4.84033,16.778146 l 0,0 z"
+       id="path3021"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 457.09403,179.10402 c 365.67522,0 365.67522,0 365.67522,0"
+       id="path3797"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3981"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(1.0580151,0,0,1.0580151,22.803195,-127.7592)"><flowRegion
+         id="flowRegion3983"><rect
+           id="rect3985"
+           width="220.21326"
+           height="48.487324"
+           x="13.131983"
+           y="316.98984" /></flowRegion><flowPara
+         id="flowPara3987">Cellule 1</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3981-0"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(1.0580151,0,0,1.0580151,312.25315,-127.77968)"><flowRegion
+         id="flowRegion3983-9"><rect
+           id="rect3985-4"
+           width="220.21326"
+           height="48.487324"
+           x="13.131983"
+           y="316.98984" /></flowRegion><flowPara
+         id="flowPara3987-8">Cellule 2</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4016"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(0.91106412,0,0,0.91106412,-56.871376,2.6235302)"><flowRegion
+         id="flowRegion4018"><rect
+           id="rect4020"
+           width="424.28574"
+           height="45.714283"
+           x="50.714287"
+           y="-84.14286" /></flowRegion><flowPara
+         id="flowPara4022">Gaz sous pression $P$</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3981-8"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(1.0580151,0,0,1.0580151,801.3219,-128.66879)"><flowRegion
+         id="flowRegion3983-2"><rect
+           id="rect3985-45"
+           width="220.21326"
+           height="48.487324"
+           x="13.131983"
+           y="316.98984" /></flowRegion><flowPara
+         id="flowPara3987-5">Cellule 1</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3981-0-1"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(1.0580151,0,0,1.0580151,1076.772,-128.68925)"><flowRegion
+         id="flowRegion3983-9-7"><rect
+           id="rect3985-4-1"
+           width="220.21326"
+           height="48.487324"
+           x="13.131983"
+           y="316.98984" /></flowRegion><flowPara
+         id="flowPara3987-8-1">Cellule 2</flowPara></flowRoot>  </g>
+</svg>

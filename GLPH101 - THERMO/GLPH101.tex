@@ -1,0 +1,643 @@
+%\part{GLPH101}
+\chapter{Notions fondamentales et énergie thermique.}
+\section{Système thermodynamique}
+Un système thermodynamique est composé de matière et d'énergie répartis dans un volume de l'espace délimité par une surface ($\Sigma$).
+L'ensemble de ce qui n'appartient pas à $\Sigma$ est appelé l'univers.
+
+On définit la température comme un paramètre physique qui décrit le degré d'agitation thermique. De façon générale, un système thermoélastique\footnote{Système thermoélastique : fluide (liquide ou gaz)} dépend de :
+\begin{itemize}
+	\item La pression $P$,
+	\item La température $T$,
+	\item Le volume $V$.
+\end{itemize}
+
+Ce type de système va pouvoir échanger de l'énergie avec l’extérieur. Il existe deux possibilités :
+\begin{itemize}
+	\item Via le travail d'une force : échange d'énergie "ordonnée" par l'application de forces extérieures sur le système.
+	\item Via la chaleur : Il s'agit d'un échange d'énergie qui s'effectue de façon désordonnée au sein du système. Cet échange s'effectuant au sein du système.
+\end{itemize}
+
+   
+\paragraph{Attention :} Ne pas confondre chaleur (énergie) et température (caractéristique physique).
+
+\section{Caractéristiques des systèmes}
+\begin{itemize}
+	\item Système ouvert : Système pouvant échanger de la matière et de l'énergie avec l’extérieur.
+	\item Système fermé : Système pouvant seulement échanger de l'énergie avec l'extérieur.
+	\item Système isolé mécaniquement : Système pouvant échanger de l'énergie uniquement par la chaleur.
+	\item Système isolé globalement : Système ne pouvant pas échanger d'énergie avec l'extérieur.
+\end{itemize}
+
+\section{Échelles et notion de température}
+\subsection{Échelle Celsius}
+C'est une échelle linéaire à deux points fixes. Ces points sont :
+\begin{itemize}
+	\item Température de fusion de l'eau (0°C)
+	\item Température d'ébullition de l'eau (100°C)
+\end{itemize}
+Pour une pression de 1 Bar ($\approx10^{5}$Pa).
+Dans cette échelle, on mesurera :
+$$T = 100*\frac{x-x_{0}}{x_{100}-x_{0}}$$
+Avec $T$ la température et $x$ la grandeur thermométrique mesurée (niveau de mercure par exemple)
+
+\subsection{Échelle thermodynamique}
+Si on étudie la variation de volume $V$ avec la température Celsius $T$ on trouve $V = V(T)$. Si on extrapole cette relation pour trouver $V=0$, on obtient 
+$$T_{abso}=-273,15$$
+On défini alors la température thermodynamique par translation : 
+$$T_{th} = T_C - T_{abso}$$
+$$T_{th} = T_C - 273,15$$
+
+\subsection{Phase d'un système}
+Un corp physique peut exister sous trois états :
+\begin{itemize}
+	\item Solide
+	\item Liquide
+	\item Gazeux
+\end{itemize}
+\subsection{Point triple d'un corps pur}
+État dans lequel existent simultanément le trois phases du corps donné
+\subsection{Principe 0 de la dynamique}
+Lorsque deux systèmes sont mis en contact thermique, au bout  d'un certain temps ils atteindrons l'équilibre thermique, caractérise par une température finale égale (et uniforme) pour ces deux corps.
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{10cm}
+	\input{fig1_principe0.pdf_tex}
+\end{figure}
+
+\section{Capacité thermique}
+\subsection{Cas des solides et des liquides}
+On définit l'échange thermique énergétique par
+$$Q = m.c.\Delta T$$
+avec :
+\begin{itemize}
+	\item[$Q$ :] L'échange thermique énergétique (en Joules)
+	\item[$m$ :] La masse du corps
+	\item[$\Delta T$ :] $T_{final} - T_{initial}$
+	\item[$c$ :] La capacité thermique massique (en $J.kg^{-1}.K^{-1}$)
+\end{itemize}
+
+\paragraph{Attention} Pour utiliser cette formule, on suppose que la capacité thermique massique ($c$) est constante sur la gamme de température ($[T_i;T_f]$) étudiée.
+
+On définit aussi la capacité calorifique $C$ comme 
+$$C=m.c$$
+Ce qui donne $Q=C.\Delta T$. On rencontre aussi la notion de capacité thermique molaire notée $C_m$. On a alors $Q=n.C_m.\Delta T$ avec $n$ le nombre de moles.
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{ c | c}
+			Corps Pur & $c$ ($J.kg^{-1}.K^{-1}$) \\
+		\hline
+			Glace & 2100 \\
+			Aluminium & 902 \\
+			Diamant & 506 \\
+			Argent & 236 \\
+		\hline
+			Eau & 4185 \\
+			Ethanol & 2424\\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	\caption{Exemples de valeurs de capacités thermiques massiques}
+	\label{Exemples de valeurs de capacités thermiques massiques}
+	
+\end{table}
+
+\subsection{Évolution en fonction de la température}
+Nous allons illustrer dans le cas où on utilise la capacité thermique molaire $C_m$ pour une variation de température suffisament faible notée $dT$.
+
+Soit $\delta Q$ le transfert thermique infinitésimal associé à la variation $dT$.
+$$\delta Q=n.C_m(T).dT$$
+Pour faire passer le corps étudié de la température $T_i$ à la température $T_f$, on va utiliser le transfert thermique
+\begin{eqnarray*}
+Q&=\int^{T_f}_{T_i}\delta Q.dT\\
+&=\int^{T_f}_{T_i}n.C_m(T).dT
+\end{eqnarray*}
+
+En général, $C_m(T)$ est une fonction analytique de la température.
+$$C_m(T) = a_o+\frac{b}{T}+\frac{c}{T^2}$$
+
+\paragraph{Remarque}
+On définit parfois une capacité calorifique molaire moyenne par
+$$\overline{C_m}=\frac{1}{\Delta T}\int^{T_1}_{T_f}C_m(T).dT$$
+
+\section{Chaleur latente d'un corps pur}
+Un changement de phase est un changement de l'état physique du corps pur considéré. On utilise un diagramme (diagramme de phases) pour représenter l'existence de ces états physiques. 
+\newpage
+\begin{figure}[ht]
+	\centering
+	\def\svgwidth{10cm}
+	\input{fig2_diagramme_point_triple.pdf_tex}
+	\caption{Exemple de diagramme de phases}
+\end{figure}
+
+\paragraph{Cas particulier} Pour l'eau, la courbe de fusion est négative (ici en rouge)
+
+Le point triple est le point pour lequel les trois états physiques du corps pur étudié coexistent.
+
+Les changements de phases se font à pression et température fixe (pour un corps donné). Si on considère que le corps étudié a une masse $m$, le transfert thermique nécessaire pour le faire passer d'une phase $1$ à une phase $2$ vaut :
+$$Q=m.l_{12}$$
+Où $l_{12}$ est la chaleur latente massique du changement de phase $1\rightarrow 2$. $l_{12}$ est en $J.K^{-1}$
+
+
+\chapter{Diffusion thermique}
+\section{Généralités}
+Les transferts thermiques peuvent se réaliser de trois façons :
+\begin{itemize}
+	\item Par diffusion
+	\item Par convection
+	\item Par rayonnement
+\end{itemize}
+la diffusion est un mode de transfert d'énergie sans déplacement macroscopique de matière. En effet, ce transfert est lié à l'agitation thermique. Ainsi, il s'effectue de proche en proche.
+
+\section{Courant de diffusion thermique}
+La diffusion thermique se met en place lorsqu'on rencontre une hétérogénéité de température. la diffusion thermique va tendre à uniformiser le champ de température. On va introduire la notion de courant thermique pour caractériser ces transferts.
+
+\subsection{Vecteur densité de courant thermique}
+Soit $\overrightarrow{J_Q}$ le vecteur de diffusion thermique tel que son flux à travers une surface $\Sigma$ représente la puissance thermique traversant cette surface.
+\newpage
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{5cm}
+	\input{fig3_vect_diffusion_th.pdf_tex}
+	\caption{Vecteur de diffusion thermique}
+\end{figure}
+
+Soit $Q$ la chaleur traversant la surface $\Sigma$.
+$$Q=\left[\iint_{\Sigma}\overrightarrow{J_Q}(M).\overrightarrow{dS}\right]dt$$
+Où $\overrightarrow{J_Q}(M).\overrightarrow{dS}$ représente le flux élémentaire thermique traversant une surface élémentaire $d\Sigma$. On le note
+$$d\Phi_\Sigma = \overrightarrow{J_Q}(M).\overrightarrow{dS}$$
+Où $\overrightarrow{dS}=dS\overrightarrow{n}$\footnote{$\overrightarrow{n}$ est un vecteur unitaire normal (?) à la surface $\Sigma$}. On peut alors définir la chaleur élémentaire $\delta^2Q$ traversant $\Sigma$.
+$$\delta^2Q = \overrightarrow{J_Q}(M).\overrightarrow{dS}.dt$$ 
+Pour trouver la chaleur élémentaire traversant la surface $\Sigma$ on intègre la quantité $\delta^2Q$.
+
+\begin{eqnarray*}
+\delta Q&=\int\delta^2Q\\
+&=\left[\iint_{\Sigma}\overrightarrow{J_Q}(M).\overrightarrow{dS}\right]dt
+\end{eqnarray*}
+
+On définit ainsi la puissance thermique à travers $\Sigma$ pendant un temps $dt$.
+$$P_{\textsc{th}}=\frac{\delta Q}{dt}=\iint_{\Sigma}\overrightarrow{J_Q}(M).\overrightarrow{dS}$$
+avec 
+\begin{itemize}
+	\item[$P_{\textsc{th}}$] en Watts
+	\item[$\overrightarrow{J_Q}$  ] en $W.m^{-2}$
+\end{itemize}
+
+\subsection{Loi de Fourrier}
+Il s'agit d'une loi phénoménologique obtenue à partir de résultats expérimentaux.
+$$\overrightarrow{J_Q}(M) = -\lambda.\overrightarrow{grad}~T$$
+Où $\lambda$ est le coefficient de conductivité thermique.
+\paragraph{Remarque} Le signe $\ominus$ traduit le fait que le transfert thermique s'effectue toujours du point le plus chaud vers le point le plus froid.
+Pour un système de coordonnées cartésiennes, on a :
+$$\overrightarrow{grad}~a(x,y,z) = \overrightarrow{e_x}.\frac{\partial a}{\partial x}+\overrightarrow{e_y}.\frac{\partial a}{\partial y}+\overrightarrow{e_z}.\frac{\partial a}{\partial z}$$
+\paragraph{Rappel} L'intensité de $\overrightarrow{J_Q}(M)$ notée $||\overrightarrow{J_Q}(M)||$ est reliée à l'amplitude de $||\overrightarrow{grad}~T||$ c'est à dire à l'hétérogénéité de $T$ dans l'espace 3D
+\paragraph{Remarque} On peut observer certaines analogies avec l'électrocinétique. En effet :
+\begin{itemize}
+	\item On caractérise le courant des porteurs de charge (les électrons) par le vecteur $\overrightarrow{J_C} = \sigma\overrightarrow{grad}~V$ où $\sigma$ est la résistivité. L'analogie est donc : 
+	$$T\longleftrightarrow V$$
+	$$\lambda \longleftrightarrow \sigma$$
+	\item De même, en terme de puissance, on a $P_{\textsc{th}} = \iint \overrightarrow{J_Q}.d\overrightarrow{S}$ à comparer à l'intensité $I=\iint \overrightarrow{J_C}.d\overrightarrow{S}$
+\end{itemize}
+
+\newpage
+\section{Équation de diffusion en régime stationnaire}
+\subsection{Démonstration dans le cas général}
+On va, par simplification, traiter le cas en une dimension.
+
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{7.5cm}
+	\input{fig4_vect_diffusion_3d.pdf_tex}
+	\caption{Vecteur de diffusion thermique en trois dimension}
+\end{figure}
+On a choisi un parallélépipède parallèle au plan $(Oyx)$ et positionné sur l'axe $(Ox)$. On obtient : 
+$$T(x,y,z,t)\longmapsto T(x,t)$$
+On caractérise le transfert thermique entrant par la face $ABCD$ pendant le temps $dt$ à travers la face $ABCD$.
+
+\begin{eqnarray*}
+\delta Q_x &=&- \iint\lambda\left.\frac{\partial T}{\partial x}\right|_x dS_x .\overrightarrow{e_x}.\overrightarrow{e_x}.dt\\
+ &=&-\lambda	S \left.\frac{dT(x,t)}{dx}\right|_x dt
+\end{eqnarray*}
+De même, on aura à travers la face de sortie $EFGH$
+$$\delta_{x+dx} = \lambda\left.\frac{dT(x,t)}{dx}\right|_{x+dx}S.dt$$
+Le gain d'énergie sera alors donné par
+
+\begin{eqnarray*}
+\delta^2Q &=&\delta Q_x - \delta  Q_{x+dx}\\
+&=&-\lambda S\left[ \left. \frac{dT}{dx}\right|_x - \left.\frac{dT}{dx}\right|_{x+dx}\right] dt
+\end{eqnarray*}
+
+Or on a $\left.\frac{dT}{dx}\right|_{x+dx} = \left. \frac{dT}{dx}\right|_x + \frac{d}{dx}\left(\frac{dT}{dx}\right)dx$ donc, d'après le développement de Taylor\footnote{le théorème de Taylor appelé aussi la formule de Taylor, montre qu'une fonction plusieurs fois dérivable au voisinage d'un point peut être approximée par une fonction polynôme dont les coefficients dépendent uniquement des dérivées de la fonction en ce point.}\footnote{A VERIFIER, je ne vois pas l'utilité ni l'application...} on a :
+$$\delta^2Q_{gain} = \lambda S\frac{d^2T(x,t)}{d^2x}dx.dt$$
+
+Ce gain d'énergie calorifique est aussi égal à la quantité définie à partir de la capacité calorifique massique : 
+$$\delta^2Q = \lambda S\frac{s^2T(x,t)}{d^2x}dx.dt = m.c.dt$$
+
+Or, on remarque que $S.dx$ est le volume du parallélépipède. On pose $\rho$ la masse volumique du solide étudié, on a donc $m=\rho.S.dx$. D'où
+\begin{eqnarray*}
+	dt.\lambda S\frac{d^2T(x,t)}{d^2x}dx &=&\rho.S.dx.c.dT\\
+	\Leftrightarrow dt.\lambda\frac{d^2T(x,t)}{d^2x}&=&\rho.c.dT
+\end{eqnarray*}
+d'où
+$$	\frac{\partial^2T(x,t)}{\partial^2x}-\frac{c.\rho}{\lambda}.\frac{\partial^2T(x,t)}{\partial^2t} =0$$
+
+On pose $\frac{\lambda}{c\rho}=D_{\textsc{th}}$ où $D\_{\textsc{th}}$ est le coefficient de diffusion thermique.
+
+\subsection{Cas du régime permanent stationnaire}
+En régime permanent, toutes les variations vis à vis du temps ($t$) seront nulles. D'où:
+$$\frac{\partial T(x,t)}{\partial t}=0$$
+Dans ce cas, on cherchera à résoudre
+$$\frac{d^2T(x)}{d^2t}=0$$.
+Cette équation peut aussi s'écrire sous la forme
+$$\Delta T(x)=0$$
+où $\Delta$ est un opérateur nommé Laplacien\footnote{On le rencontre aussi sous la forme $\nabla^2$}. ici, en coordonnées cartésiennes, $\Delta = \frac{\partial^2}{\partial^2x}$ pour un problème en une dimension. Cependant si on est en trois dimensions, on a :
+$$\Delta T(x,y,z) = \frac{\partial^2T(x,y,z)}{\partial^2x} + \frac{\partial^2T(x,y,z)}{\partial^2y}+ \frac{\partial^2T(x,y,z)}{\partial^2z}$$
+Si on est dans un autre système de coordonnées, il faut utiliser l'expression du Laplacien dans ce jeu de coordonnées.
+
+\section{Solution de l'équation de la chaleur (régime permanent)}
+On cherche une fonction de la variable $x$ (dans un problème en une dimension ici) qui représente la fonction température.
+
+la face d'entrée à $x=0$ est à la température fixe $T_1$. La face de sortie en $x=L$ est à température fixe $T_2$. On part de l'équation $\frac{d^2T(x)}{d^2x}=0$ et on détermine $T(x)$ par intégrales successives de l'équation de la chaleur
+$$\frac{d^2T(x)}{d^2x}=0\quad\underrightarrow{Integration}\quad\frac{dT(x)}{2x}=A\quad\underrightarrow{Integration}\quad T(x)=Ax+B$$
+Or, en $x=0$, $T(0)=T_1$ donc $T(0)=B=T_1$ et en $x=L$, $T-L=T_2$ donc $T(L) = AL+T_1 = T_2$ d'où $A = \frac{T_2-T_1}{L}$. On a donc
+$$T(x)=\frac{T_2-T_1}{2}x+T_1$$
+
+\section{Resistance thermique}
+On rappelle que la puissance thermique traversant une surface $\Sigma$ est donnée par
+
+\begin{eqnarray*}
+	P_{\textsc{th}}&=&\iint_\Sigma\overrightarrow{J_Q}.d\overrightarrow{S}\\
+	&=&-\lambda\iint_\Sigma\overrightarrow{grad}~T.dS\\
+	&=&-\lambda\iint_\Sigma\frac{\partial T}{\partial x}.dS\\
+	&=&-\lambda\frac{\partial T}{\partial x}~S
+\end{eqnarray*}
+Dans l'exemple précédent, $T(x) = \frac{T_2-T_1}{L}x+T_1$  donc $\frac{\partial T(x)}{\partial x} = \frac{T_2-T_1}{L}$  donc
+$$P_{\textsc{th}} = -\lambda\frac{T_2-T_1}{L}~S$$
+On pose ici la définition de la résistance thermique comme étant 
+$$R_{\textsc{th}}= \frac{T_2-T_1}{P_{\textsc{th}}}$$
+ou encore $R_{\textsc{th}}= \frac{L}{\lambda S}$
+
+\paragraph{Remarque} Si on associe des conducteurs thermiques en série, la résistance thermique totale sera
+$$R_{\textsc{th}_{total}}=\sum^{N}_{i=1}R_{\textsc{th}_i}$$
+De même, si on associe les conducteurs en parallèle, on obtiens
+$$\frac{1}{R_{\textsc{th}_{total}}} = \sum^{N}_{i=1}\frac{1}{R_{\textsc{th}_i}}$$
+
+\section{Analogie avec la diffusion particulaire}
+Dans la diffusion particulaire, on étudie la diffusion de particules (atomes, molécules) dans l'espace.
+
+On aura un courant de diffusion de particules dès que la concentration de celles-ci n'est pas homogène dans l'espace. On note $\overrightarrow{J_N}$ le vecteur densité de flux particulaire. On a :
+$$dN = \left[\iint\overrightarrow{J_N}.\overrightarrow{dS}\right]dt$$
+$dN$ étant la variation du nombre de particules traversant la section $\Sigma$ étudiée pendant le temps $dt$. Le vecteur densité $\overrightarrow{J_N}$ est donné par la loi de Fick :
+$$\overrightarrow{J_N} = -D\overrightarrow{grad}~n$$
+où $n$ est la densité de particules (en particules/$m^3$) et $D$ le coefficient de diffusion particulaire (en $m^2.s^{-1}$).
+
+Pour l'équation de diffusion particulaire, on procède comme pour la diffusion thermique, on fait un bilan :
+$$D\cdot\Delta n -\frac{\partial n}{\partial t} = 0$$
+Donc en régime constant, on aura $D.\Delta n=0$
+
+
+\chapter{Transformation thermodynamique et gaz parfaits}
+\section{Équation d'état d'un système thermodynamique}
+\subsection{Variable d'état}
+Il s'agit d'une variable macroscopique mesurable et décrivant le système dans son ensemble. Par exemple $P$,$V$ et $T$
+\subsection{Fonction d'état}
+C'est une fonction qui relie entre elles les différentes variables d'état. Elle établit $f(P,V,T)=0$
+
+\section{Équilibre et transformation d'un système}
+On se basera sur un système globalement isolé et stationnaire pour lequel $\frac{\partial X}{\partial t}=0$. Ce système est donc à l'équilibre lorsque ses variables sont aussi à l'équilibre thermodynamique. C'est-à-dire lorsqu'on a
+$$\frac{df(P,V,T)}{dt}=0$$
+\subsection{Transformations thermodynamiques}
+Il s'agit d'évolution possible qui fait passer l'état thermodynamique d'un système d'un état initial stable à un autre état, final, lui aussi stable.
+\subsubsection{Transformation quasi-statique}
+Transformation pour laquelle les états intermédiaires sont des états d'équilibre infiniment voisins.
+Ces transformations se réalisent très lentement.
+\subsubsection{Transformations réversibles et irréversibles}
+Les transformations réversibles sont des transformations pour lesquelles on peut revenir à l'état initial à partir de l'état final en effectuant une transformation "inverse"
+
+Une transformation irréversible est donc une transformation qui ne permet pas se retour en arrière.
+
+\paragraph{Remarque} Dans la nature, toute transformation est irréversible, notamment à cause des frottements.
+\paragraph{Remarque} Toute transformation réversible est quasi-statique mais l'inverse est faux.
+
+\subsubsection{Transformation isotherme}
+La température du système est constante et est celle du milieu extérieur.
+$$T(t)=T_{ext}=cste$$
+\subsubsection{Transformation monotherme}
+La température finale du système est la même que la température initiale.
+$$T_f=T_i$$
+\subsubsection{Transformation isobare/monobare}
+De même que les transformations isotherme et monotherme mais en fixant la pression au lieu de la température.
+\subsubsection{Transformation cyclique}
+Transformation revenant à son état initial au bout d'un certain temps.
+\subsubsection{Transformation adiabatique}
+Transformation qui s’effectue sans transfert thermique avec l’extérieur.
+$$\delta Q = 0$$
+\subsection{Thermostat}
+Il s'agit d'une source thermique idéale. Un système pour lequel on peut considérer sa température comme une constante.
+$$T=T_{init}=cste$$
+En pratique, on considère qu'un thermostat est un corps caractèrisé par une capacité thermique quasi-infinie.
+\subsection{Variables extensives et intensives}
+Une variable extensive est une variable additive sous l'association de plusieurs sous-systèmes.
+Une variable intensive est une variable locale dans le sous-système.
+\section{Modèle du gaz parfait}
+Un gaz parfait est un gaz suffisamment dilué pour pouvoir négliger les interactions entre les particules qui le composent à l'exeption de l'instant où elles entres en collision\footnote{Théorie cinétique des gaz}
+\subsection{Équation d'état du gaz parfait}.
+$$PV=nRT$$
+Avec : 
+\begin{itemize}
+	\item [P :] la pression
+	\item [V :] le volume
+	\item [n :] le nombre de moles de gaz
+	\item [R :] la constante des gaz parfaits
+	\item [T :] la température
+\end{itemize}
+
+\section{Travail des forces de pression}
+\subsection{Travail infinitésimal}
+On considère un gaz sous une pression $P$ contenu dans un récipient cylindrique de section $S$.
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{10cm}
+	\input{fig8_travail_infinitesimal.pdf_tex}
+	\caption{Travail infinitésimal}
+\end{figure}
+On a ici :
+$$\overrightarrow{F_{ext}} = -P_{ext}.S.\overrightarrow{i}$$
+On définit le travail élémentaire par
+\begin{eqnarray*}
+	\delta W &=& \overrightarrow{F_{ext}} . d\overrightarrow{l}\\
+	&=&-P_{ext} . S.dl . \overrightarrow{i} . \overrightarrow{i}\\
+	&=&-P_{ext} . dV
+\end{eqnarray*}
+\paragraph{Remarque}
+\begin{itemize}
+	\item Si $dV < 0$ alors on réalise une compression  du gaz et $\delta w > 0$. Le gaz reçoit de l'énergie.
+	\item Si $dV > 0$ alors on réalise une détente du gaz et $\delta w < 0$. Le gaz perd de l'énergie.
+\end{itemize}
+\subsection{Cas particulier des transformations quasi-statiques}
+Pour une transformation quasi-statique, chaque état intermédiaire de la transformation est un état d'équilibre thermodynamique donc la pression extérieure $P_{\textsc{ext}}$ est égale à la pression du gaz. On a donc :
+$$P = P_{ext}$$
+Dans ce cas, le travail élémentaire des forces de pression est
+$$\delta W = -PdV$$
+\subsection{Travail global}
+On a, d'une manière générale :
+$$W_{A\rightarrow B} = \int_A^B\delta W$$
+Soit, dans le cas d'une réaction quasi-statique : 
+$$W_{A\rightarrow B} = -\int_A^BPdV$$
+Ou, dans le cas d'une transformation non quasi-statique :
+\begin{eqnarray*}
+	W_{A\rightarrow B} &=& -\int_A^BP_{ext}.dV\\
+	&=&-P_{ext} \int_A^B. dV
+\end{eqnarray*}
+Dans le cas où $P_{ext}$ est constante.
+\chapter{Premier principe de la thermodynamique}
+Un système est caractérisé par ses variables d'état. Ce système peut évoluer entre deux états d'équilibres (par exemple $A$ et $B$). Le premier principe de la thermodynamique a pour but de faire le bilan énergétique d'un système.
+\section{Énergie totale et énergie interne}
+On rappelle qu'un système est caractérisé par son énergie microscopique.
+$$E_m = E_c + E_p$$
+On rappelle que les forces conservatives dérivent d'une énergie potentielle
+$$\overrightarrow{F_c} = -\overrightarrow{grad}~E_p$$
+On va généraliser le théorème de l'énergie microscopique en introduisant l'énergie interne. Pour tout système formé, on définit l'énergie totale $E_{tot}$ par $E_{tot} = E_c + E_p + U$ où $U$ désigne l'énergie interne du système\footnote{Cours peut-être incomplet, A VERIFIER}. De cette façon, en l'absence d'échange d'énergie avec l’extérieur, on aura $E_{tot}$ constante.
+\section{Bilan d'énergie et $1^{er}$ principe}
+Pour un système pouvant échanger de l'énergie avec l’extérieur, il peut le faire de deux façons :
+\begin{itemize}
+	\item Par le travail des forces mécaniques ($W$)
+	\item Par le transfert thermique ($Q$)
+\end{itemize}
+Le bilan énergétique d'un système sera :
+\begin{eqnarray*}
+	\Delta E_{tot} &=& E_{tot}(final) - E_{tot}(init)\\
+	&=&-\Delta E_m + \Delta Q\\
+	&=& W + Q
+\end{eqnarray*}
+\paragraph{Remarque} $W$ et $Q$ sont algébriques, si $W$ ou $Q$ est négatif, il y a une perte d'énergie. Sinon, il y a un gain.
+Dans beaucoup de cas, on a un système pour lequel on peut considérer que $E_c + E_p = 0$ (ou au moins $\Delta E_m < 0$). Dans ce cas, on a
+$$\Delta U = W + Q$$
+Si on effectue une transformation infinitésimale, on aura :
+$$dU = \delta W + \delta Q$$
+$U$ est une fonction d'état dont la variation ne dépend que des états initial et final et non du chemin suivi pour y arriver. Par conséquent, $dU$ est une différentielle totale exacte. On peut la noter :
+$$\sum_{i=1}^n\left(\frac{\partial U}{\partial X_i}\right)dx$$
+Par exemple, $dU = \left(\frac{\partial U}{\partial V}\right)dV + \left(\frac{\partial U}{\partial T}\right)dT$ pour le couple de variables $(V;T)$. Par contre, $\delta W$ et $\delta Q$ ne sont pas des différentielles totales exactes. Leurs variations élémentaires dépendent du chemin suivi.
+\section{Application du $1^{er}$ principe à la détente de Joule}
+On considère :
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\input{fig9_detente_joule.pdf_tex}
+	\caption{Détente de Joule}
+\end{figure}
+
+On supposera les parois adiabatiques ($\delta Q=0$) et indéformables ($\delta W = 0$). Pour une telle détente\footnote{Appelée "détente de Joule-Gay-Lussac"} on aura :
+$$dU = \Delta U = 0$$
+On en déduit que $U$ reste constante.
+
+\section{$1^{ère}$ loi de Joule}
+Pour un gaz parfait, l'énergie interne $U$ n'est fonction que de la température.
+$$U = U(T)$$
+Donc, pour un gaz parfait, on a $\frac{\partial U}{\partial V} = 0$
+
+\section{Capacité calorifique des gaz à volume constant}
+Pour un gaz parfait, on a :
+$$C_v = \frac{\partial U}{\partial T}$$
+Or, d'après la loi de Joule,
+$$dU = \frac{\partial U}{\partial T}$$
+donc $dU = C_.dT$ et $\Delta U = C_v\Delta T$ pour $C_v$ indépendant de la température.
+
+\paragraph{Remarque} Si $C_v$ dépend de la température, alors
+$$\Delta U = \int C_v(T).dT$$
+
+Pour un gaz parfait monoatomique, on peut montrer que $C_v = \frac{3}{2} nR$ et $U(T) = \frac{3}{2}nRT$. De même, pour un gaz diatomique, $C_v = \frac{5}{2}nR$ et $U(T) = \frac{5}{2}nRT$
+
+\section{Application du premier principe aux transformations thermodynamiques}
+On va illustrer  le cas d'une transformation isotherme d'un gaz parfait d'un état $A$ à un état $B$.
+
+Le gaz parfait est défini par son équation d'état $PV = nRT$. Puisque la réaction est isotherme, $T_A = T_B$. On en déduit donc que :
+$$P_AV_A = P_BV_B$$
+Si la transformation est quasi statique, le travail des forces de pression est :
+\begin{eqnarray*}
+	\delta W &=& -PdV \\
+	&=& -\frac{nRT}{V}dV\\
+	\Rightarrow W &=& -nRT\int_A^B\frac{dV}{V}\\
+	&=& -nRT. ln(\frac{V_A}{V_B})
+\end{eqnarray*}
+
+\paragraph{Remarque} On peut aussi exprimer le travail en fonction de la pression $P$. On note que $P.V$ reste constant au cours de la transformation.
+
+\section{Enthalpie et capacité calorifique des gaz à pression constante}
+Une transformation isobare s'effectue à pression constante. On cherche à évaluer le transfert thermique $\delta Q_p$ lors d'une telle transformation.
+
+On peut poser $dP = 0$ d'où\footnote{A VERIFIER}:
+\begin{eqnarray*}
+	PdV &=& P.dV + \overbrace{V.dP}^{=0}\\
+	&=& d(PV)
+\end{eqnarray*}
+Par ailleur, on a :
+\begin{eqnarray*}
+	dU &=& \delta W + \delta Q_p \\
+	\Leftrightarrow dU &=& -P.dV + \delta Q_p \\
+	\Leftrightarrow dU + d(PV)&=&  \delta Q_p \\
+	\Leftrightarrow d(U + P.V) &=& \delta Q_p \\
+	&=&dH\\
+\end{eqnarray*}
+Où $H = U+PV$ représente l'enthalpie qui est aussi une fonction d'état (tout comme $U$). On déduit alors que $\Delta H=Q_p$. De plus, on peut exprimer la différentielle de $H$ en variables $T$ et $P$.
+$$dH = \frac{\partial H}{\partial T} dT + \frac{\partial H}{\partial P} dP$$
+On pose
+$$\frac{\partial H}{\partial T} = C_p$$
+\section{$2^{ème}$ loi de Joule}
+Sachant qu'un gaz parfait obéit à la première loi de Joule ($U = U(T)$) et sachant qu'on a :
+\begin{eqnarray*}
+	H = U+P.V &=&U+nRT\\
+	&=& U(T) + nRT
+\end{eqnarray*}
+On constate qu'un gaz parfait obéit à la deuxième loi de Joule. Son enthalpie est fonction de la seule variable température.
+$$H = H(T) $$
+Donc, pour un gaz parfait, on aura $\frac{\partial H}{\partial P} = 0$
+
+\section{Relation de Mayer}
+\begin{eqnarray*}
+	H &=& u+PV\\
+	&=& U + nRT
+\end{eqnarray*}
+donc
+\begin{eqnarray*}
+	\frac{dH}{dT} & = & \frac{dU}{dT} + nR\\
+	\frac{\partial H}{\partial T} & = & \frac{\partial U}{\partial T} + nR\\
+	C_p &=& C_v + nR\\
+	C_p - C_v &=& nR
+\end{eqnarray*}
+
+\paragraph{Remarques} Soit $C_{p;m}$ la capacité calorifique molaire à pression constante. On a $C_{p;m} = \frac{C_p}{n}$ d'où $C_{p;m} - C_{v;m} = R$
+
+On définit aussi le rapport
+$$\gamma = \frac{C_p}{C_v}$$
+
+a partir de la relation de Mayer, on détermine $C_p$
+\begin{itemize}
+	\item Gaz monoatomique
+			\begin{eqnarray*}
+					C_p &=& C_v + nR\\
+					&=& \frac{3}{2}nR + nR\\
+					 &=& \frac{5}{2}nR
+			\end{eqnarray*}
+	\item Gaz diatomique
+	\begin{eqnarray*}
+					C_p &=& C_v + nR\\
+					&=& \frac{5}{2}nR + nR\\
+					&=& \frac{7}{2}nR
+			\end{eqnarray*}
+\end{itemize}
+
+\section{Représentation graphique des transformations}
+Pour représenter des transformations thermodynamiques, on utilise le diagramme de Clapeyron.
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{7cm}
+	\input{fig10_clapeyron_simple.pdf_tex}
+	\caption{Exemple de diagramme de Clapeyron}
+\end{figure}
+L'intégrale $\int_{V_A}^{V_B} P.dV$ représente l'aire sous la courbe $P=f(V)$. Cette intégrale est une grandeur algébrique.
+\begin{itemize}
+	\item Si $ V_A > V_B$ alors on a 
+	$$\int_{V_A}^{V_B}P.dV < 0$$
+	Dans ce cas, 
+	$$W_{A\rightarrow B} = -\int_{V_A}^{V_B} P.dV > 0$$
+	\item Si $ V_A < V_B$ alors on a 
+	$$\int_{V_A}^{V_B}P.dV > 0$$
+	Dans ce cas, 
+	$$W_{A\rightarrow B} = -\int_{V_A}^{V_B} P.dV < 0$$
+\end{itemize}
+
+\subsubsection{Cas particulier des transformations cycliques}
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{7cm}
+	\input{fig11_clapeyron_reversible.pdf_tex}
+	\caption{Diagramme de Clapeyron pour une transformation réversible}
+\end{figure}
+Sur le cycle, on a $W_{cycle} = W_{A\rightarrow B} + W_{B\rightarrow A}$. De plus, on observe que
+$$|W_{A\rightarrow B}| > |W_{B\rightarrow A}|$$
+Or, on a $W_{A\rightarrow B} < 0 $ donc on aura $W_{cycle} < 0$
+\section{Transformation adiabatique réversible et loi de Laplace}
+On exprime le premier principe de la thermodynamique :
+\begin{eqnarray*}
+					dU &=&  \delta Q + \delta W\\
+					\Leftrightarrow \delta Q &=& dU - \delta W \\
+					&=& 0
+\end{eqnarray*}
+Car la transformation est adiabatique. Pour un gaz parfait, on a
+\begin{eqnarray*}
+					dU &=&  C_V.dT\\
+					0 &=& C_V.dT - \delta W \\
+					&=& nC_{V,m}dT+P.dV
+\end{eqnarray*}
+Car $C_V =\frac{nR}{\gamma -1}$. Or $PV = nRT$ donc on a :
+$$0 = \frac{nRdT}{\gamma -1}+nRT\frac{dV}{V}$$
+Et, si on divise par $T$,
+\begin{eqnarray*}
+				0 &=& \frac{nR}{\gamma -1} \cdot \frac{dT}{T} + nR\cdot\frac{dV}{V}\\
+				 &=& \frac{dT}{T} + (\gamma -1) \frac{dV}{V}
+\end{eqnarray*}
+On intègre pour obtenir 
+\begin{eqnarray*}
+				K &=& ln(T) + ln(V^{\gamma -1})\\
+				&=& ln(T.V^{\gamma -1})
+\end{eqnarray*}
+Où $K$ est une constante. Donc, $TV^\gamma$ est une constante. En appliquant la loi de Laplace, en coordonnées $(T,V)$ on obtient $PV^\gamma$ est une constante.
+\paragraph{Remarque} Il est possible de lier $TV^\gamma$ et $PV^\gamma$ par :
+$$TV^{\gamma-1} = \frac{PV}{nR}V^{\gamma-1}$$
+Car on sait que $TV^{\gamma-1}$ est constant donc $\frac{PV}{nR}V^{\gamma-1}$ est constant aussi, donc $\frac{P}{nR}V^{\gamma}$ est constant et donc $PV^{\gamma}$ est constant.
+
+\subsection{Travail reçu par un gaz parfait}
+Comme ce type\footnote{Lequel ?} de transformation est adiabatique, on a $\Sigma Q = 0$ et donc $\delta Q = 0$. On peut donc appliquer la première loi de Joule
+$$dU = C_VdT = nC_{V,m}dT$$
+Et, en appliquant le premier principe de la thermodynamique, on obtient
+\begin{eqnarray*}
+				dU &=& \delta W + \delta Q\\
+				&=& \delta W + 0
+\end{eqnarray*}
+Or on a $W = \int{\delta W} = \int_A^B{nC_{V,m}dT}$ donc on a
+\begin{eqnarray*}
+				W &=&nC_{V,m}(T_B-T_A)\\
+				&=& C_V(T_B-T_A)
+\end{eqnarray*}
+Or $C_V=\frac{nR}{\gamma -1}$ donc on a
+$$W =\frac{nR}{\gamma -1}(T_B-T_A)$$
+Ou encore
+$$W =\frac{nR}{\gamma -1}(P_BV_B-P_AV_A)$$
+
+\chapter{Introduction aux gaz réels}
+\section{Définition}
+Pour un gaz parfait, on avait négligé les interaction entre les molécules ou atomes constituants le gaz.
+
+Pour un gaz réel, cette hypothèse n'est plus valide. On va considérer l'intéraction moléculaire/atomique.
+
+Dans un gaz parfait, pour modéliser les interactions moléculaires, on utilise "Le modèle des sphères dures"
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{10cm}
+	\input{fig12_repulsion_parfait.pdf_tex}
+	\caption{Modèle des sphères dures}
+\end{figure}
+Ici, $E_p(r)$ représente la répulsion entre deux molécules en fonction de la distance qui les sépare.
+
+Avec les gaz réels, on utilisera plutôt des modèles comme celui-ci, plus réaliste.
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{10cm}
+	\input{fig12_repulsion_reel.pdf_tex}
+	\caption{Modèle des gaz réels}
+\end{figure}
+
+\section{Équation d'état d'un gaz de Van der Waals}
+$$P =\frac{nRT}{V-nb} = \frac{an^2}{V^2}$$
+ou encore
+$$\left(P+\frac{an^2}{v^2}\right)\left(V-nb\right) = nRT$$
+Avec $\frac{an^2}{v^2}$ le terme correctif de pression interne et $nb$ le terme correctif de volume\footnote{Ce terme est du à la présence des molécules}.
+\section{Coefficients thermoélastiques}
+\subsection{Coefficient de dilatation isobare}
+Le coefficient de dilatation isobare $\alpha$ vaut :
+$$\alpha = \frac{1}{v}\cdot\frac{\partial V}{\partial T}$$
+\subsection{Coefficient de compressibilité isotherme}
+Le coefficient de dilatation isobare $\chi_T$ vaut :
+$$\chi_T = -\frac{1}{v}\cdot\frac{\partial V}{\partial P}$$

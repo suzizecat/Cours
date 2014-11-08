@@ -1,0 +1,64 @@
+\chapter{Transformations chimiques}
+\section{\'Equation bilan}
+Lorsque l'on écrit une équation bilan, il faut toujours veiller à respecter les lois de conservation de la matière :
+\begin{itemize}
+	\item Conservation de la masse et donc des atomes,
+	\item Conservation de la charge électronique totale.
+\end{itemize}
+
+On peut écrire une équation bilan de plusieurs façons. La façon la plus classique est celle où les réactifs sont à gauche de l'équation et les produits à droite.
+Une autre possibilité est de l'écrire comme cela :
+$$\sum_i{\nu_i B_i} = 0$$
+où $B_i$ est un composant et $\nu_i$ son coefficient \stoe algébrique, négatif si le composant est un réactif.
+
+\notation{On notera les réactifs $\nu_i$ et $B_i$ et les produits $\nu_i'$ et $B_i'$}
+
+En fait, on a :
+$$\sum_i{\nu_iB_i} = 0 \Leftrightarrow \sum_i{\nu_iB_i} + \sum_i{\nu_i'B_i'} = 0 \Leftrightarrow \sum_i{-\nu_iB_i} = \sum_i{\nu_i'B_i'}$$
+Par exemple :
+\begin{center}
+	$\ce{H2 + 1/2O2} = \ce{H2O} \Leftrightarrow \ce{H2O} - \ce{H2} - \ce{1/2O2} =0$
+\end{center}
+De même, pour les variations de grandeurs \thermo, on aura :
+$$\Delta_\rsc G = \sum_i{\nu_i\Delta G_i}$$
+
+\notation{On essaiera toujours d'avoir le plus petit des \coef s \stoe s égal à 1}
+\attention{%
+Dans une réaction chimique, il faut indiquer l'état physique des \glspl{reactant}, par exemple :
+$$\ce{2H2_{(g)} + 1O2_{(g)} = 2H2O_{(l)}}$$%
+}
+
+\section{Proportions \stoes}
+
+Soit la réaction générique et le tableau d'avancement suivants :
+\begin{center}
+	\begin{tabular}{cccccccc}
+		&\reacStdTab{}\\[0.1cm]
+		à $t=0$ & $n_1(0)$ && $n_2(0)$ && $n_1'(0)$ && $n_2'(0)$\\[0.1cm]
+		à $t$ qcq & $n_1(t)$ && $n_2(t)$ && $n_1'(t)$ && $n_2'(t)$\\
+	\end{tabular}
+\end{center}
+la réaction se produit dans des proportions \stoes si on a $\frac{n_1(0)}{|\nu_1|} = \frac{n_2(0)}{|\nu_2|}$ et $\frac{n_1'(0)}{|\nu_1'|} = \frac{n_2'(0)}{|\nu_2'|}$. Si ce n'est pas le cas, le \gls{reactant} pour lequel ce rapport est le plus petit est en défaut et celui pour lequel ce rapport est le plus grand est en excès.
+\rem{Le \gls{reactant} en défaut est aussi appelé \gls{reactant} limitant}
+
+\section{\'Evolution de la composition d'un système}
+Dans le cas d'une \gls{reac_tot}, ou réaction quantitative, à l'équilibre le \gls{reactant} limitant n'existe plus qu'à l'état de traces.
+\rem{On a $\Deltar G^0 = -RT\ln K_{eq}$ or%
+$$K_{eq} = \prod_i{C_i^{\nui}}=\frac{\prod_i{C_i'^{\nui'}}}{\prod_i{C_i^{\nui}}}$$
+donc, si $C_1=0$ alors $\Deltar G^0 = \infty$}
+
+Dans le cas d'une \gls{reac_rev}, tous les \glspl{reactant} restent présent en quantités "visibles" à l'équilibre.
+
+\subsection{\Gls{avancement} de la réaction $\xi$ ou $x$}
+
+Soit la réaction 
+Soit la réaction générique et le tableau d'avancement suivants :
+\begin{center}
+	\begin{tabular}{cccccccc}
+		&\reacStdTab{}\\[0.1cm]
+		à $t$ qcq & $n_1(t)$ && $n_2(t)$ && $n_1'(t)$ && $n_2'(t)$\\
+	\end{tabular}
+\end{center}
+alors on a
+$$\xi(t) = \frac{\Delta n_i}{\nui} = \frac{n_i(t) - n_i(0)}{\nui}$$
+on en déduit $n_i(t) = n_i(0) + \nui \xi (t)$

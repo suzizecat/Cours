@@ -1,0 +1,59 @@
+%\part{GLPH202}
+
+\chapter{Le second principe de la thermodynamique}
+
+\section{Définitions}
+
+	\paragraph{Source de chaleur}Une source de chaleur est un système fermé n'échangeant de l'énergie que par transfert thermique.
+	\paragraph{Thermostat}Un thermostat est une source de chaleur dont la température est constante ($Q\longrightarrow+\infty$)
+
+\section{Définition de l'entropie}
+
+	On rappelle que le premier principe de la thermodynamique donne
+	$$dU = \delta Q+\delta W$$
+	Dans le cas d'une transformation réversible (Avec $-PdV=\delta W$). Si on considère une transformation réversible on peut définir le transfert thermique par :
+	$$\delta Q = TdS$$
+	Où $S$ est une fonction d'état, extensive et non additive, nommée entropie. L'entropie est donnée en $J.K^{-1}$.
+
+\section{Énoncé du second principe de la thermodynamique}
+
+Pour tout système fermé en contact avec une ou plusieurs sources de chaleur, on peut définir une fonction d'état extensive et non additive $S$ telle que
+$$dS = \delta S_e + \delta S_c$$
+où $\delta S_e$ est l'entropie échangée avec la ou les sources de chaleur avec lesquelles le système est en contact. On pourra la définir par 
+$$\delta S_e = \frac{\delta Q_e}{T_{e}}$$
+Où
+\begin{itemize}
+	\item $\delta Q_e$ est le transfert thermique reçu par le système.
+	\item $T_{e}$ est la température de la source de chaleur.
+\end{itemize}
+Et où $\delta S_c$ est l'entropie créée avec
+$$\delta S_c \geq 0$$
+telle que $\delta S_c = 0$ pour une transformation réversible et $\delta S_c > 0$ si la transformation est irréversible.
+
+On peut donner une formule intégrée du second principe :
+$$\Delta S = S_e - S_c = S_f-S_i$$
+Avec
+$$S_e = \int_{A}^{B}{\delta S_e} = \int_{A}^{B}{\frac{\delta Q}{T_e}}$$
+
+\section{Causes possibles de l'irréversibilité}
+\subsection{Forces de frottement}loi de fourrier
+Lors d'un frottement, l'énergie mécanique du système n'est pas conservée. Il y a donc irréversibilité.
+
+\subsection{Échanges thermiques}
+Lors du processus de diffusion thermique, le courant de diffusion thermique est irréversible (loi de Fourrier)
+
+\subsection{Mélange de deux gaz}
+Lors du mélange de deux gaz, il y a diffusion selon la loi de Fick. Ce qui induit, de la même façon que pour la loi de Fourrier, une irréversibilité.
+
+\section{Exemple : détente de Joule-Gay-Lussac}
+
+On travaille avec des parois adiabatiques et rigides. On a donc $W=0$ et $Q=0$ donc $\Delta U=0$.
+
+Pour ce qui est de l'entropie, on a $\Delta S =S_e + S_c$ or, les parois sont adiabatiques\footnote{Les parois ou le système ?} donc $S_e=0$. Par ailleurs, $S_c > 0$ car on travaille sur une réaction irréversible.
+
+On va pouvoir calculer $\Delta S$ indépendamment en considérant que c'est une fonction d'état, donc en considérant qu'il existe un chemin réversible amenant au même état final.
+
+Dans ce cas, on a $dS = \frac{\delta Q_{reversible}}{T}$ or, on a aussi $\delta Q_{rev} = -\delta W = PdV$ car $\Delta U = 0$. Or on travaille sur un gaz parfait, donc $P=\frac{nRT}{V}$ et $PdV=nrt\frac{dV}{V}$ donc $dS=nR\frac{dV}{V}$ et on a :
+$$\Delta S = \int{dS} = nR\int_{V_i}^{V_f}{\frac{dV}{V}} = nR\ln{\frac{V_f}{V_i}}$$
+
+\paragraph{Remarque :}Dans le cas d'une détente, on a toujours $V_f > V_i$ donc $\ln{\frac{V_f}{V_i}} > 0$ et donc $\Delta S >0$

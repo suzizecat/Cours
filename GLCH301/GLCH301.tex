@@ -1,0 +1,80 @@
+\documentclass{book}
+ 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel} 
+\usepackage{lmodern} % Pour changer le pack de police
+\usepackage{pageTitre}
+\usepackage{glossaries}
+
+\usepackage[version=3]{mhchem}%Pour les formules chimiques
+
+%\usepackage{makeidx}
+%\makeindex
+\makenoidxglossaries
+ 
+ \institut{\'Ecole Polytechnique Universitaire de Montpellier}
+\departement{Département PEIP}
+\titre{Cours de thermochimie}
+\nom{Faucher}
+\prenom{Julien}
+\auteurParNom{}%
+\sousTitre{HLCH301}
+\addrDebut{UNIVERSITE MONTPELIER 2 SCIENCES ET TECHNIQUES DU LANGUEDOC}
+\addrSuite{Place Eugène Bataillon -- 34095 MONTPELLIER -- CEDEX 5}
+\tel{04 67 14 31 60}
+\fax{04 67 14 45 14}
+\mail{scola@polytech.univ-montp2.fr}
+
+\newcommand{\ignore}[1]{}
+
+\newcommand{\thermo}{thermodynamique}
+\newcommand{\Thermo}{Thermodynamique}
+
+\newcommand{\coef}{coefficient}
+\newcommand{\stoe}{st\oe chiométrique}
+\newcommand{\stoes}{st\oe chiométriques}
+
+\newcommand{\nui}{\nu_i}
+\newcommand{\Deltar}{\Delta_\textsc{r}}
+
+\newcommand{\reacStdTab}{$\nu_1B_1$&+&$\nu2B_2$&$\rightleftharpoons$&$\nu_1'B_1'$&+&$\nu_2'B_2'$}
+
+\newcommand{\notation}[1]{\paragraph{Notation :}#1\\}
+\newcommand{\rem}[1]{\paragraph{Remarque :}#1\\}
+\newcommand{\attention}[1]{\paragraph{Attention :}#1\\}
+
+\newcommand{\rsc}{\textsc{r}}
+
+
+\input{glossaire.tex}
+
+\begin{document}
+\titrePerso{}
+
+\frontmatter 
+
+\tableofcontents
+
+\mainmatter
+\input{chap1.tex}
+
+\backmatter
+\printnoidxglossaries
+
+\ignore{\appendix
+  
+Chapitres annexes
+%\bibliographystyle{} % Le style est mis entre crochets.
+%\bibliography{bibli} % Mon fichier de base de données s'appelle bibli.bib.
+
+\backmatter
+
+Epilogue
+
+
+\listoffigures
+\listoftables
+\printindex
+}
+\end{document}

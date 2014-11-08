@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="641.28534"
+   height="673.9458"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="fig2_diagramme_point_triple.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3780"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="533.79485"
+     inkscape:cy="-69.755638"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(35.59375,-263.9917)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.53991055;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m -25.586928,881.24975 c 618.468158,0 618.468158,0 618.468158,0"
+       id="path2985"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.53991055;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 27.104953,927.94276 c 0,-651.14072 0,-651.14072 0,-651.14072"
+       id="path2985-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.53991055px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 28.198156,880.14302 C 160.47471,856.90192 317.82363,772.2482 367.08851,705.28143 549.65204,706.38815 586.82066,562.51468 586.82066,562.51468"
+       id="path4581"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.8237741px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 367.22956,704.0319 C 466.42819,297.05017 466.42819,295.93821 466.42819,295.93821"
+       id="path4583"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#c00000;stroke-width:1.56996131;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.13992264, 6.27984529;stroke-dashoffset:0"
+       d="M 367.07371,705.26645 C 184.53979,295.81038 184.53979,295.81038 184.53979,295.81038"
+       id="path4591"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:30.84403419px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="39.524574"
+       y="298.49411"
+       id="text4593"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99387113,1.0061667)"><tspan
+         sodipodi:role="line"
+         id="tspan4595"
+         x="39.524574"
+         y="298.49411">$P$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.84403419px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="575.43964"
+       y="914.82404"
+       id="text4597"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99387113,1.0061667)"><tspan
+         sodipodi:role="line"
+         id="tspan4599"
+         x="575.43964"
+         y="914.82404">$T$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.84403419px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#007d00;fill-opacity:1;stroke:none;font-family:Sans"
+       x="64.309944"
+       y="507.24213"
+       id="text4601"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99387113,1.0061667)"><tspan
+         sodipodi:role="line"
+         id="tspan4603"
+         x="64.309944"
+         y="507.24213">\textsc{Solide}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.84403419px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#007d00;fill-opacity:1;stroke:none;font-family:Sans"
+       x="425.22775"
+       y="546.06824"
+       id="text4601-2"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99387113,1.0061667)"><tspan
+         sodipodi:role="line"
+         id="tspan4603-7"
+         x="425.22775"
+         y="546.06824">\textsc{Liquide}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.84403419px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#007d00;fill-opacity:1;stroke:none;font-family:Sans"
+       x="365.74283"
+       y="814.85199"
+       id="text4601-6"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99387113,1.0061667)"><tspan
+         sodipodi:role="line"
+         id="tspan4603-1"
+         x="365.74283"
+         y="814.85199">\textsc{Gaz}</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#0001a9;fill-opacity:1;stroke:#00a900;stroke-width:2.03600001000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.07200000000000010, 8.14400000000000010;stroke-dashoffset:0"
+       id="path4635"
+       sodipodi:cx="752.56366"
+       sodipodi:cy="761.8291"
+       sodipodi:rx="357.59399"
+       sodipodi:ry="326.27927"
+       d="m 1110.1577,761.8291 a 357.59399,326.27927 0 1 1 -715.18803,0 357.59399,326.27927 0 1 1 715.18803,0 z"
+       transform="matrix(0.02934424,0,0,0.02934424,346.7977,683.75222)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4637"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000a9;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-35.59375,263.9917)"><flowRegion
+         id="flowRegion4639"><rect
+           id="rect4641"
+           width="584.8783"
+           height="51.51778"
+           x="419.21332"
+           y="449.69193"
+           style="fill:#0000a9;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara4643">\textsc{Point triple}</flowPara></flowRoot>  </g>
+</svg>

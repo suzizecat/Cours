@@ -1,0 +1,193 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pageTitre}[2014/08/24]
+ 
+%chargement des extensions requises au bon fonctionnement de l'extension et des documents
+\RequirePackage{fancyhdr}
+\RequirePackage{geometry}
+\RequirePackage{etoolbox}
+
+ 
+\newbool{bdate}
+\booltrue{bdate}
+
+\DeclareOption{nodate}{\setboolean{bdate}{false}}
+
+%déclaration des options de l'extension
+\ProcessOptions
+ 
+
+ 
+ 
+%commandes et/ou environnements personnalisés
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+\newcommand{\Bool}[1]{\newbool{#1}\boolfalse{#1}}
+
+
+
+\newcommand{\INTVIDE}{}
+\newcommand{\INTinstitut}{}
+\newcommand{\INTtitre}{}
+\newcommand{\INTauteur}{}
+\newcommand{\INTnom}{}
+\newcommand{\INTprenom}{}
+\newcommand{\INTsousTitre}{}
+\newcommand{\INTid}{}
+\newcommand{\INTaddrDebut}{}
+\newcommand{\INTaddrSuite}{}
+\newcommand{\INTtel}{}
+\newcommand{\INTfax}{}
+\newcommand{\INTport}{}
+\newcommand{\INTmail}{}
+\newcommand{\INTdepartement}{}
+
+
+\Bool{btitre}
+\Bool{binstitut}
+\Bool{bauteur}
+\Bool{bnom}
+\Bool{bprenom}
+\Bool{bsoustitre}
+\Bool{bid}
+\Bool{baddr1}
+\Bool{baddr2}
+\Bool{btel}
+\Bool{bfax}
+\Bool{bport}
+\Bool{bmail}
+\Bool{bdept}
+
+
+\newcommand{\departement}[1]{\renewcommand{\INTdepartement}{#1}\ifstrempty{#1}{\boolfalse{bdept}}{\booltrue{bdept}}}
+\newcommand{\institut}[1]{\renewcommand{\INTinstitut}{#1}\ifstrempty{#1}{\boolfalse{binstitut}}{\booltrue{binstitut}}}
+\newcommand{\titre}[1]{\renewcommand{\INTtitre}{#1}\ifstrempty{#1}{\boolfalse{btitre}}{\booltrue{btitre}}    }
+\newcommand{\auteur}[1]{\renewcommand{\INTauteur}{#1}\ifstrempty{#1}{\boolfalse{bauteur}}{\booltrue{bauteur}}}
+\newcommand{\nom}[1]{\renewcommand{\INTnom}{#1}\ifstrempty{#1}{\boolfalse{bnom}}{\booltrue{bnom}}}
+\newcommand{\prenom}[1]{\renewcommand{\INTprenom}{#1}\ifstrempty{#1}{\boolfalse{bprenom}}{\booltrue{bprenom}}}
+\newcommand{\auteurParNom}[1]{\renewcommand{\INTauteur}{\INTprenom{} \textsc{\INTnom}}\ifstrempty{\INTprenom\INTnom}{\boolfalse{bauteur}}{\booltrue{bauteur}}}
+\newcommand{\sousTitre}[1]{\renewcommand{\INTsousTitre}{#1}\ifstrempty{#1}{\boolfalse{bsoustitre}}{\booltrue{bsoustitre}}}
+\newcommand{\identifiant}[1]{\renewcommand{\INTid}{#1}\ifstrempty{#1}{\boolfalse{bid}}{\booltrue{bid}}}
+\newcommand{\addrDebut}[1]{\renewcommand{\INTaddrDebut}{#1}\ifstrempty{#1}{\boolfalse{baddr1}}{\booltrue{baddr1}}}
+\newcommand{\addrSuite}[1]{\renewcommand{\INTaddrSuite}{#1}\ifstrempty{#1}{\boolfalse{baddr2}}{\booltrue{baddr2}}}
+\newcommand{\tel}[1]{\renewcommand{\INTtel}{#1}\ifstrempty{#1}{\boolfalse{btel}}{\booltrue{btel}}}
+\newcommand{\fax}[1]{\renewcommand{\INTfax}{#1}\ifstrempty{#1}{\boolfalse{bfax}}{\booltrue{bfax}}}
+\newcommand{\port}[1]{\renewcommand{\INTport}{#1}\ifstrempty{#1}{\boolfalse{bport}}{\booltrue{bport}}}
+\newcommand{\mail}[1]{\renewcommand{\INTmail}{#1}\ifstrempty{#1}{\boolfalse{bmail}}{\booltrue{bmail}}}
+
+
+\newcommand{\addAuteurParNom}{\ifstrempty{\INTprenom\INTnom}{}{\renewcommand{\INTauteur}{\INTauteur\\\INTprenom{} \textsc{\INTnom}}}}
+
+\newcommand{\coord}{%
+	\ifbool{btel}%
+	{%
+		Tel : \INTtel%
+		\ifbool{bport}%
+		{%
+			~-- Port : \INTport%
+		}%
+		{}
+		\ifbool{bfax}%
+		{%
+			~-- Fax : \INTfax%
+		}%
+		{}
+	}
+	{
+		\ifbool{bport}%
+		{%
+			Port : \INTport%
+		}%
+		{}
+		\ifbool{bfax}%
+		{%
+			~-- Fax : \INTfax%
+		}%
+		{}
+	}
+	\ifboolexpr{bool {btel} or bool{bfax} or bool {bport}}{\\}{}
+}
+
+	
+
+\newcommand{\ecritMail}{\ifbool{bmail}{E-Mail : \INTmail}{}}
+
+
+\ifundef{\headrulewidth}{\newcommand{\headrulewidth}{}}{}
+\newcommand{\titrePerso}{
+\renewcommand{\headrulewidth}{0pt}
+
+\thispagestyle{fancy}
+\newgeometry{top=2cm,bottom=4.7cm,right=2cm,left=2cm}
+\cfoot{
+	\sffamily \centering \normalsize \ifbool{binstitut}{\MakeUppercase{\INTinstitut}\\}{}
+	\footnotesize \ifbool{baddr1}{\MakeUppercase{\INTaddrDebut}\\}{}
+	\scriptsize \ifbool{baddr2}{\INTaddrSuite\\}{}
+	\coord%
+	\ecritMail%
+}
+\rfoot{}
+\lfoot{}
+
+		{\usefont{OT1}{bch}{b}{n} \centering
+        \normalsize \normalfont \flushright \ifbool{bid}{\INTid\\}{}
+		\normalfont \LARGE \centering \ifbool{binstitut}{\textsc{\INTinstitut}\\}{}
+        \normalfont \Large \ifbool{bdept}{\textsc{\INTdepartement \\ [25pt]}}{}
+        \ifbool{btitre}{\horrule{0.5pt} \\[0.4cm]
+		\Huge \INTtitre\\
+		\horrule{2pt} \\[2.5cm]}{}
+		\ifbool{bauteur}{\LARGE \INTauteur\\}{}
+        \ifbool{bdate}{\large \today \\[-0.1cm]}{}
+        \ifboolexpr{bool {bdate} or bool {bauteur}}{\rule{7cm}{0.5pt}\\[-0.1cm]}{}
+        \ifbool{bsoustitre}{\LARGE \centering \INTsousTitre \\}{}
+        }
+\newpage
+\restoregeometry
+\renewcommand{\headrulewidth}{1pt}
+\rfoot{\thepage}
+\cfoot{}
+\setcounter{page}{1}
+}
+
+
+
+
+
+\newcommand{\INTTextRemerciement}{}
+\newcommand{\TEMPO}{}
+\newcommand{\INTImage}{}
+
+%\newcommand{\MiseTempo}{\renewcommand{\TEMPO}{\INTTextRemerciement}}
+\newcommand{\ajoutLigneRemerciement}[1]{\renewcommand{\INTTextRemerciement}{#1}}
+
+\newcommand{\remerciements}{
+\renewcommand{\headrulewidth}{0pt}
+
+\thispagestyle{fancy}
+\newgeometry{top=2cm,bottom=2cm,right=2cm,left=2cm}
+\cfoot{
+}
+\rfoot{}
+\lfoot{}
+
+		{\usefont{OT1}{bch}{b}{n} \centering
+        \Huge \normalfont \flushleft Remerciements\\[30pt]
+		\normalfont \normalsize		
+		\begin{flushright}
+		\begin{itshape}
+		\INTTextRemerciement\\[1.5cm]
+		
+		\end{itshape}
+		\end{flushright}
+		{\centering \rule{7cm}{0.5pt}\\[1.5cm]}
+		\tableofcontents
+	}
+    
+\newpage
+\restoregeometry
+\renewcommand{\headrulewidth}{1pt}
+\rfoot{\thepage/8}
+\cfoot{}
+\setcounter{page}{1}
+}
+ 
+\endinput

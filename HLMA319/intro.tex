@@ -1,0 +1,33 @@
+\addcontentsline{toc}{chapter}{Introduction -- Définition d'une limite}
+\section*{Introduction -- Définition d'une limite}
+On se demande quel est le sens de $\lim\limits_{x \to a} f(x) = l$.
+
+Considérons une fonction $f$ continue quelconque. Si $]l-\epsilon; l+\epsilon[$ est un intervalle centré en $l$, il existe $]a-\delta;a+\delta[$ tel que si $x \in~ ]a-\delta;a+\delta[~, f(x) \in~ ] l-\epsilon; l+\epsilon[ $
+
+\definition{}
+Soit $f~: \RR \to \RR$ une fonction. Soit $a \in \RR$. On dit que $l\in \RR$ est la limite de $f$ quand $x$ tend vers $a$ si :
+$$\forall \epsilon > 0~,\exists~ \delta >0 \text{~tq si~} x\in~]a-\delta;a+\delta[~, f(x) \in~]l-\epsilon; l+\epsilon[$$
+
+\notation{}
+ On peut écrire $\lim\limits_{x\to a}f(x)=l$ ainsi : $\lim\limits_{a}f(x)=l$ 
+
+\remarque{}
+Cela ne fonctionne que pour $l\in\RR$.
+\remarque{}
+On a :
+	\begin{eqnarray*}
+		&&x\in~]a-\delta;a+\delta[~\\
+		&\Leftrightarrow& a-\delta < x < a+\delta\\
+		&\Leftrightarrow & -\delta < x-a < \delta\\
+		&\Leftrightarrow & |x-a| < \delta
+	\end{eqnarray*}
+Ce qui nous donne :
+$$\forall \epsilon > 0,~ \exists \delta > 0 \text{~tq~} \forall x,~ |x-a| <\delta,~ |f(x) - l| < \epsilon$$
+ainsi que les formules suivantes :
+\begin{center}
+	\begin{tabular}{c!{si}r!{tq}l}
+	$\lim\limits_{a}f = +_\infty$ & $\forall A >0,~\exists \delta > 0 $&$\forall x,~|x-a| < \delta \Rightarrow f(x) > A$\\
+	$\lim\limits_{+\infty}f = l$ & $\forall \epsilon >0,~\exists B > 0 $&$\forall x,x < B \Rightarrow |f(x)-l| <\epsilon$\\
+	$\lim\limits_{+\infty}f = +_\infty$ & $\forall A >0,~\exists B > 0 $&$\forall x,x < B \Rightarrow f(x) > A$
+	\end{tabular}
+\end{center}
