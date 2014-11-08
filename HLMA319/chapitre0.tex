@@ -32,7 +32,7 @@ C'est à dire si $f=g+$ quelque chose de négligeable devant $g$.
 		\Leftrightarrow f(x) & = & g(x)(1+\epsilon(x))\\
 		\Leftrightarrow \frac{f(x)}{g(x)} &=& 1 + \epsilon(x)\\
 		\Leftrightarrow \lim\limits_a\frac{f(x)}{g(x)} &=& 1\\
-\end{eqnarray*}
+\end{eqnarray*}itemize
 Les deux dernières notations ne sont valides que si $g\neq 0$ au voisinage de $a$. $\epsilon$ est une fonction telle que $\lim\limits_a\epsilon=0$ 
 
 \notation{}
@@ -71,4 +71,46 @@ Si $f$ admet un $DL_n(0)$ alors, de développement limité est unique.
 \exemple{}
 
 \thm{Formule de Taylor}
-Soit $f$ définie au voisinage de 0 et de classe $\CCr^n$
+Soit $f$ définie au voisinage de 0 et de classe $\CCr^n$ ($n$ fois dérivable avec $f^{(n)}=\frac{d^nf(0)}{dx^n}$ continue). On a :
+$$f(x)=\sum_{k=0}^n{\left(\frac{f^{(n)}(0)}{k!}x^k\right)}+o(x^n)$$
+
+\demonstration{}
+Voire Wikipédia.
+
+\corollaire{}
+Si $f$ est $\CCr^n$ alors elle admet un $DL_n(0)$
+
+\exemple{}
+Posons $f(x)=e^x$. $\forall n,f(x)^{(n)} = e^x$ et $f(0)^{(n)} = 1$. On a donc
+$$e^x = \sum_{k=0}^n{\frac{1}{k!}x^n}+o(x^n)$$
+Soit
+$$e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots+\frac{x^n}{n!}+o(x^n)$$
+
+\remarque{}
+C'est \emph{LA} bonne définition de $e^n$.
+
+\exemple{}
+
+\remarque{}
+Taylor c'est bien, mais parfois très complexe (par exemple le $DL_{10}(0)$ de $\frac{1+x}{1-x^2}$
+
+\remarque{}
+Un développement limité est une \emph{égalité} et non une approximation.
+
+\prop{Opérations sur les $DL$ :}
+Soit $f$ et $g$ deux fonctions. Admettons un $DL_n(0)$ tel que :
+\begin{itemize}
+	\item $f(x)=P(x)+o(x^n)$
+	\item $g(x)=Q(x)+o(x^n)$
+\end{itemize}
+Avec $\deg P =\deg Q=n$. On a alors :
+\begin{description}
+	\item[Addition :]$f(x) + g(x) = P(x) + Q(x) + o(x^n)$
+	\item[Produit :]$f(x) * g(x) = R(x) + o(x^n)$ où $R(x)$ est le polynôme $P(x)Q(x)$ tronqué à l'ordre $n$
+	\item[Composition :]$f\circ g(x) = T(x) + o(n)$ où $T(x)$ est le polynôme $P(x)\circ Q(x)$ ($\deg R(x) = n^2$) tronqué au rang $n$.
+	\item[Dérivation :] Si $f$ est dérivable, $f'(x) = P'(x) + o(x^{n-1})$
+	\item[Intégration :]Si $f$ est continue, $F(x) = \int_0^x{f(t) dt} =\int_0^x{P(t)dt}+o(x^{n+1})$
+\end{description}
+
+\prop{}
+Si $f(x) = P(x)+o(x^n)$ est un $DL_n(0)$ de $f$ avec $\deg P=n$, alors $P \sim_0 f$
