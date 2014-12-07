@@ -62,3 +62,35 @@ Soit la réaction générique et le tableau d'avancement suivants :
 alors on a
 $$\xi(t) = \frac{\Delta n_i}{\nui} = \frac{n_i(t) - n_i(0)}{\nui}$$
 on en déduit $n_i(t) = n_i(0) + \nui \xi (t)$
+
+$\xi(t)$ est \emph{l'\gls{avancement} de la réaction} est est exprimé en \emph{mole d'avancement}\footnote{Différent de la mole de matière}. On définit également l'avancement élémentaire
+$$d\xi=\frac{dn_i}{\nui}$$
+aussi appelé \gls{varDonder}.
+
+\subsection{Sens d'évolution}
+On peut déterminer le sens d'évolution d'un système thermochimique via l'\gls{avancement}. En effet, 
+\begin{itemize}
+	\item Si $\xi(t) > 0$ ou $d\xi>0$ l'avancement est "positif", le système évolue donc dans le sens direct ou sens 1 ($\rightarrow$).
+	\item Si $\xi(t) < 0$ ou $d\xi<0$ l'avancement est "négatif", le système évolue donc dans le sens indirect ou sens -1 ($\leftarrow$).
+\end{itemize}
+
+\subsection{Limites d'avancement}
+On note $\avcinfty$ la valeur théorique de l'avancement lorsque tous les réactants de la partie gauche de l'équation de réaction sont consommés.
+De même, on a $\avcinftym$ la valeur lorsque tous les réactants de la partie droite sont consommés.
+
+Notons $t_f$ le temps tel que $t_f - t_0$ soit la durée de la réaction. On a :
+\begin{itemize}
+	\item Pour une réaction totale : $\xi(t_f) = \xi_{\pm\infty}$ (suivant le sens de la réaction)
+	\item Pour un équilibre : $\xi(t_f) \in [\avcinftym ; \avcinfty]$
+\end{itemize}
+
+On peut facilement calculer la valeur de $\xi_{\pm\infty}$ en utilisant la formule de calcul de l'avancement sur le réactif limitant et avec $n_i(t_f)=0$.
+$$\xi_{\pm\infty}=\frac{-n_i(0)}{|\nui|}$$
+
+\subsection{Taux de conversion \& coefficient de dissociation}
+Le \gls{taux_conv} $\tau$ représente la proportion de réactant consommé à un temps $t$ de la réaction. Il est défini par la formule :
+$$\tau=\frac{n_i(0)-n_i(t)}{n_i(0)}$$
+ou par
+$$\tau=\frac{\xi(t)}{\xi_{\pm\infty}}$$
+
+On doit toujours avoir $\tau\in[0;1]$. S'il n'y a qu'un seul réactif, le taux de conversion est appelé \emph{\gls{coef_disso}} et est noté $\alpha$
