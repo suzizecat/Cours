@@ -1,0 +1,68 @@
+\chapter{Suites}
+Dans ce chapitre, on pose $\KK = \RR$ ou $\CC$ ou $\QQ$
+
+\section{Propriété fondamentale de $\RR$}
+Soit $\AA \subset \RR$.
+\definition{}
+On dit que $M \in \RR$ est un majorant / minorant de $\AA$ si $\forall x \in \AA$, $x \leq M$ / $x \geq M$
+
+\definition{}
+On dit que $M$ est une borne supérieure/inférieure de $\AA$ si :
+\begin{itemize}
+	\item $M$ est majorant/minorant de $\AA$
+	\item Si $M'$ est majorant/minorant de $\AA$, on doit avoir $M'>M$ / $M'<M$. C'est à dire que $M$ doit être le plus petit/grand majorant/minorant de $\AA$
+\end{itemize}
+
+\prop{}
+Si $\AA$ admet une borne supérieure ou inférieure, cette borne est unique.
+
+\demonstration{}
+Soient $M_1$ et $M_2$ deux bornes supérieures de $\AA$.\\
+\begin{tabular}{r!{$\Rightarrow$}l}
+	Alors $M_1$ majore $\AA$ & $M_1 \geq M_2$\\
+	$M_2$ majore $\AA$ & $M_2 \geq M_1$
+\end{tabular}\\
+Donc $M_1=M_2$.
+
+\notation{}
+On note une borne supérieure $\sup \AA$ et une borne inférieure $\inf \AA$.
+
+\remarque{}
+On se place dans $\KK = \QQ$ et $\AA = \{x\in \QQ, x^2\leq 2\}$\\
+Alors on a $A =[-\sqrt{2};\sqrt{2}] \cap \QQ$. Dans ce cas, $\AA$ n'a pas de bornes dans $\QQ$. En effet, si ces bornes existent, elles valent $\pm \sqrt{2} \notin \QQ$. C'est une des raisons de la création de l'ensemble des réels.
+
+\axiome{}
+Soit $\AA \subset \RR$ tel que $\AA \neq \emptyset$ et $\AA$ majorée. Alors $\sup \AA \in \RR$ existe.
+
+\section{Suites}
+\definition{}
+Une suite de $\KK$ est une application de $\NN$ dans $\KK$\\
+\begin{tabular}{rcl}
+$u:\NN$ &$\longmapsto$&$\KK$\\
+$n$&$\rightarrow$&$u(n)$
+\end{tabular}
+
+\notation{}
+$u(n)$ est noté $u_n$ et la suite $u$ est notée $(u_n)_{n\in \NN}$ ou simplement $u_n$.
+
+\exemple{}
+$u_n = \ln\left(1+\frac{1}{n}\right)$
+
+\remarque{}
+On peut dire qu'une suite est une restriction à $\NN$ d'une fonction $f:[0~;+\infty[\longrightarrow\KK$
+
+\axiome{Récurrence}
+Soit $P(n)$ une propriété dépendant de $n\in \NN$. Si
+\begin{itemize}
+	\item il existe $x$ tel que $P(x)$ est vérifiée,
+	\item pour tout $n>x$, $P(n)$ nous permet de déduire $P(n+1)$
+\end{itemize}
+alors, $P(n)$ est vérifiée pour tout $n>x$.
+
+\prop{}
+
+\demonstration{}
+
+\definition{Monotonie}
+Pour $\KK \neq\CC$, soit $(u_n)$ une suite de $\KK$, alors $(u_n)$ est croissante si 
+$$\forall p,q \in \NN, p \leq q \Rightarrow u_p \leq u_q$$
