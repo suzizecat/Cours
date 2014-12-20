@@ -1,32 +1,33 @@
 \chapter{Comparaison de fonctions et développements limités}
 \section{Négligeabilité  et équivalence}
 
-\paragraph{Définition (Abus) :}
+\defi
 Soit $a\in\RR$. Un voisinage de $a$ est un intervalle de la forme $]a-\delta;a+\delta[$ ou $]a-\delta;a+\delta[~/\{0\}$ avec $\delta>0$
 
-\definition{Négligeabilité}
+\defi[Négligeabilité]
 Soit $f,g:\II\subset\RR \to \RR$ deux fonctions.\\
 On dit que $f$ est négligeable devant $g$ en $a\in\RR$ s'il existe un voisinage $\VV$ de $a$ et une fonction $\epsilon:\VV\to\RR$ telle que :
 \begin{itemize}
 	\item $f(x) = g(x)\epsilon (x)$ pour $x\in \VV$
 	\item $\lim\limits_{a}\epsilon(x)=0$
 \end{itemize}
-\notation{}
+
+\nota
 Si $f$ est négligeable devant $g$, on note $f \ll_{a}g$ (Physique) ou $f=o_a(g)$ (Maths)
 
-\remarque{}
+\rem
 Si $g$ ne s'annule pas sur $\VV$, $f \ll_a g \Leftrightarrow \lim\limits_{x\to a}\frac{f(x)}{g(x)}=0$
 
-\exemple{}
+\expl
 
 
-\definition{Équivalence}
+\defi[Équivalence]
 Soit $f,g:\II\subset\RR \to \RR$ deux fonctions. Soit $a\in\RR$.\\
 On dit que $f$ est équivalente à $g$ en $a$ si on a :
 $$f(x) = g(x) + o_a(g(x))$$
 C'est à dire si $f=g+$ quelque chose de négligeable devant $g$.
 
-\remarque{}
+\rem
 \begin{eqnarray*}
 		f(x) &=& g(x) + o_a(g(x))\\
 		\Leftrightarrow f(x) & = & g(x) + g(x)\epsilon(x)\\
@@ -36,10 +37,10 @@ C'est à dire si $f=g+$ quelque chose de négligeable devant $g$.
 \end{eqnarray*}itemize
 Les deux dernières notations ne sont valides que si $g\neq 0$ au voisinage de $a$. $\epsilon$ est une fonction telle que $\lim\limits_a\epsilon=0$ 
 
-\notation{}
+\nota
 $f$ est équivalente à $g$ en $a$ s'écrit $f\sim_{a}g$
 
-\remarque{}
+\rem
 Si $f\sim_{a}g$ et $\lim\limits_ag=l$ alors,
 \begin{eqnarray*}
 		\lim\limits_a f(x) &=& \lim\limits_a g(x) *\lim\limits_a(1+\epsilon(x))\\
@@ -47,58 +48,58 @@ Si $f\sim_{a}g$ et $\lim\limits_ag=l$ alors,
 		&=&l\\
 \end{eqnarray*}
 
-\proposition{}
-Si $f\sim_ag$ et si $\lim\limits_ag$ existe, alors $\lim\limits_af=\lim\limits_ag$. \emph{Attention : la réciproque est fausse !}
+\propo{}
+Si $f\sim_ag$ et si $\lim\limits_ag$ existe, alors $\lim\limits_af=\lim\limits_ag$. \emph{Attention : la réciproque est fausse~!}
 
-\demonstration{}
-\exemple{}
+\begin{proof}\end{proof}{}
+\expl.
 
 \section{Développements limités}
-\idee{}
+\idee
 On va faire l'approximation de fonctions par des polynômes.
 
-\definition{}
+\defi
 Soit $f:\II \subset \RR \to \RR$ et $a\in \II$.\\
 On dira que $f$ admet un développement limité d'ordre $n$ en $a$ (noté $DL_n(a)$) s'il existe un polynôme $P$ de degré $n$ tel qu'au voisinage de a,
 $$f(x) = P(x-a) + o_a((x-a)^n)$$
 
-\remarque{}
+\rem
 On a $f(x+a) = P(x) + o_0(x^n)$ donc on fera les développements limités en 0
 
 \prop{}
 Si $f$ admet un $DL_n(0)$ alors, de développement limité est unique.
 
-\demonstration{}
-\exemple{}
+\begin{proof}\end{proof}
+\expl
 
 \thm{Formule de Taylor}
 Soit $f$ définie au voisinage de 0 et de classe $\CCr^n$ ($n$ fois dérivable avec $f^{(n)}=\frac{d^nf(0)}{dx^n}$ continue). On a :
 $$f(x)=\sum_{k=0}^n{\left(\frac{f^{(n)}(0)}{k!}x^k\right)}+o(x^n)$$
 
-\demonstration{}
+\begin{proof}\end{proof}
 Voire Wikipédia.
 
-\corollaire{}
+\coro
 Si $f$ est $\CCr^n$ alors elle admet un $DL_n(0)$
 
-\exemple{}
+\expl
 Posons $f(x)=e^x$. $\forall n,f(x)^{(n)} = e^x$ et $f(0)^{(n)} = 1$. On a donc
 $$e^x = \sum_{k=0}^n{\frac{1}{k!}x^n}+o(x^n)$$
 Soit
-$$e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots+\frac{x^n}{n!}+o(x^n)$$
+\[e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots+\frac{x^n}{n!}+o(x^n)\]
 
-\remarque{}
+\rem
 C'est \emph{LA} bonne définition de $e^n$.
 
-\exemple{}
+\expl
 
-\remarque{}
+\rem
 Taylor c'est bien, mais parfois très complexe (par exemple le $DL_{10}(0)$ de $\frac{1+x}{1-x^2}$
 
-\remarque{}
+\rem
 Un développement limité est une \emph{égalité} et non une approximation.
 
-\prop{Opérations sur les $DL$ :}
+\prop[Opérations sur les $DL$ :]
 Soit $f$ et $g$ deux fonctions. Admettons un $DL_n(0)$ tel que :
 \begin{itemize}
 	\item $f(x)=P(x)+o(x^n)$

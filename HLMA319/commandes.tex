@@ -6,20 +6,39 @@
 \newcommand{\RR}{\mathbb{R}\xspace}
 
 
-\renewcommand{\AA}{\text{A}\xspace}
+
 \newcommand{\II}{\text{I}\xspace}
 \newcommand{\VV}{\text{V}\xspace}
 
 \newcommand{\CCr}{\mathscr{C}\xspace}
 
-\newcommand{\axiome}[1]{\paragraph{Axiome : #1}}
-\newcommand{\corollaire}[1]{\paragraph{Corollaire : #1}}
-\newcommand{\definition}[1]{\paragraph{Définition : #1}}
-\newcommand{\demonstration}[1]{\paragraph{Démonstration : #1}}
-\newcommand{\exemple}[1]{\paragraph{Exemple : #1}}
-\newcommand{\notation}[1]{\paragraph{Notation : #1}}
-\newcommand{\idee}[1]{\paragraph{Idée : #1}}
-\newcommand{\proposition}[1]{\paragraph{Proposition : #1}}
-\newcommand{\prop}[1]{\paragraph{Propriété : #1}}
-\newcommand{\remarque}[1]{\paragraph{Remarque : #1}}
-\newcommand{\thm}[1]{\paragraph{Théorème : #1}}
+\renewcommand{\AA}{\mathcal{A}\xspace}
+
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+\newcommand{\tq}{\text{~tq~}}
+\newcommand{\BW}{Bolzano-Weierstrass}
+
+\newcommand{\pinfty}{+\infty}
+\newcommand{\minfty}{-\infty}
+\newcommand{\pminfty}{\pm\infty}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Théorème}[chapter]
+\newtheorem{axio}[thm]{Axiome}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemme}
+\newtheorem{coro}[thm]{Corollaire}
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{prop}[thm]{Propriété}
+
+\theoremstyle{remark}
+\newtheorem*{expl}{Exemple}
+\newtheorem*{idee}{Idée}
+\newtheorem*{inter}{Interêt}
+\newtheorem*{nota}{Notation}
+\newtheorem*{rem}{Remarque}
+\newtheorem*{appl}{Application}
