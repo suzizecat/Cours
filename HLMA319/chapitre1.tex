@@ -3,83 +3,92 @@ Dans ce chapitre, on pose $\KK = \RR$ ou $\CC$ ou $\QQ$
 
 \section{Propriété fondamentale de $\RR$}
 Soit $\AA \subset \RR$.
-\defi
-On dit que $M \in \RR$ est un majorant / minorant de $\AA$ si $\forall x \in \AA$, $x \leq M$ / $x \geq M$
 
-\defi
+\begin{defi}
+On dit que $M \in \RR$ est un majorant / minorant de $\AA$ si $\forall x \in \AA$, $x \leq M$ / $x \geq M$
+\end{defi}
+\begin{defi}
 On dit que $M$ est une borne supérieure/inférieure de $\AA$ si :
 \begin{itemize}
 	\item $M$ est majorant/minorant de $\AA$
 	\item Si $M'$ est majorant/minorant de $\AA$, on doit avoir $M'>M$ / $M'<M$. C'est à dire que $M$ doit être le plus petit/grand majorant/minorant de $\AA$
 \end{itemize}
-
-\prop
+\end{defi}
+\begin{prop}
 Si $\AA$ admet une borne supérieure ou inférieure, cette borne est unique.
+\end{prop}
 
-\begin{proof}\end{proof}
+\begin{proof}
+
 Soient $M_1$ et $M_2$ deux bornes supérieures de $\AA$.\\
 \begin{tabular}{r!{$\Rightarrow$}l}
 	Alors $M_1$ majore $\AA$ & $M_1 \geq M_2$\\
 	$M_2$ majore $\AA$ & $M_2 \geq M_1$
 \end{tabular}\\
 Donc $M_1=M_2$.
+\end{proof}
 
-\nota
+\begin{nota}
 On note une borne supérieure $\sup \AA$ et une borne inférieure $\inf \AA$.
+\end{nota}
 
-\rem
+\begin{rem}
 On se place dans $\KK = \QQ$ et $\AA = \{x\in \QQ, x^2\leq 2\}$\\
 Alors on a $A =[-\sqrt{2};\sqrt{2}] \cap \QQ$. Dans ce cas, $\AA$ n'a pas de bornes dans $\QQ$. En effet, si ces bornes existent, elles valent $\pm \sqrt{2} \notin \QQ$. C'est une des raisons de la création de l'ensemble des réels.
+\end{rem}
 
-\axio
+\begin{axio}
 Soit $\AA \subset \RR$ tel que $\AA \neq \emptyset$ et $\AA$ majorée. Alors $\sup \AA \in \RR$ existe.
+\end{axio}
 
 \section{Suites}
-\defi
+\begin{defi}
 Une suite de $\KK$ est une application de $\NN$ dans $\KK$\\
 \begin{tabular}{rcl}
 $u:\NN$ &$\longmapsto$&$\KK$\\
 $n$&$\rightarrow$&$u(n)$
 \end{tabular}
-
-\nota
+\end{defi}
+\begin{nota}
 $u(n)$ est noté $u_n$ et la suite $u$ est notée $(u_n)_{n\in \NN}$ ou simplement $u_n$.
-
-\expl
+\end{nota}
 $u_n = \ln\left(1+\frac{1}{n}\right)$
 
-\rem
+\begin{rem}
 On peut dire qu'une suite est une restriction à $\NN$ d'une fonction $f:[0~;+\infty[\longrightarrow\KK$
+\end{rem}
 
-\axiome[Récurrence]
+\begin{axio}[Récurrence]
 Soit $P(n)$ une propriété dépendant de $n\in \NN$. Si
 \begin{itemize}
 	\item il existe $x$ tel que $P(x)$ est vérifiée,
 	\item pour tout $n>x$, $P(n)$ nous permet de déduire $P(n+1)$
 \end{itemize}
 alors, $P(n)$ est vérifiée pour tout $n>x$.
+\end{axio}
 
-\prop{}
+\begin{prop}\end{prop}
 
 \begin{proof}\end{proof}
 
-\defi[Monotonie]
+\begin{defi}[Monotonie]
 Pour $\KK \neq\CC$, soit $(u_n)$ une suite de $\KK$, alors $(u_n)$ est croissante si 
 $$\forall p,q \in \NN, p \leq q \Rightarrow u_p \leq u_q$$
-
+\end{defi}
 \section{Convergence}
-\defi
+\begin{defi}
 Soit $(u_n)$ une suite de $\KK$ et $l\in\KK$. On dit que $(u_n)$ tend vers $l$ si :
 $$\forall\epsilon>0,\exists N\in\NN\text{~tq~}\forall n\geq N, |u_n-l| < \epsilon$$
-
-\defi
+\end{defi}
+\begin{defi}
 Pour $\KK=\RR$, on dit que ($u_n$) tend vers l'infini si et seulement si :
 $$\forall A>0,\exists N\in\NN\tq\forall n,n>N, u_n>A$$
-
-\defi
+\end{defi}
+\begin{defi}
 On dit que $(u_n)$ converge si $(u_n)$ admet une limite dans $\KK$. En particulier, une suite tendant vers l'infini diverge\footnote{Ne converge pas}.
+\end{defi}
 
-\nota
+\begin{nota}
 \begin{align*}
   &\lim u_n = l\\
 \Leftrightarrow& \lim\limits_{\pinfty}u_n=l\\
@@ -87,57 +96,61 @@ On dit que $(u_n)$ converge si $(u_n)$ admet une limite dans $\KK$. En particuli
 \Leftrightarrow& u_n \rightarrow l\\
 \Leftrightarrow& u_n \underset{n\to\pinfty}{\longrightarrow}l
 \end{align*}
+\end{nota}
 
-\thm
+\begin{thm}
 Soit $\KK=\RR$. Soit $(u_n)$ une suite de $\KK$ telle que $(u_n)$ est majorée et croissante. Alors $(u_n)$ converge et $\lim u_n = \sup u_n$ ($n\in\NN$)
+\end{thm}
 
-\appl[Suites Adjacentes]
+\begin{appl}[Suites Adjacentes]
 Soit $(u_n)$ et $(v_n)$ deux suites dans $\RR$ telles que :
 \begin{enumerate}
 	\item $(u_n)$ est croissante et $(v_n)$ est décroissante.
 	\item $\lim v_n-u_n = 0$
 \end{enumerate}
 Alors $\forall n, u_n >v_n$ et $(v_n)$ et $(u_n)$ convergent vers la même limite.
-
+\end{appl}
 \section{Suites extraites, \BW}
-\defi
+\begin{defi}
 Soient $(u_n)$ et $(v_n)$ deux suites de $\KK$. On dit que $(v_n)$ est extraite de $(u_n)$ s'il existe $\phi : \NN\to\NN$ strictement croissante telle que pour tout $n$, $v_n = u_{\phi(n)}$
-
-\nota
+\end{defi}
+\begin{nota}
 $v_k =u_{n_k}$. On dit aussi que $(v_n)$ est une sous-suite de $(u_n)$.
-
-\rem
+\end{nota}
+\begin{rem}
 ~
 \begin{enumerate}
 	\item Toute suite $(u_n)$ est extraite d'elle même. Il suffit de prendre $\phi(n)=n$.
 	\item Soit $(u_n) = (-1)^n$ et $\phi(n)=2n$. On a alors $v_n=u_{\phi(n)} = u_{2n} = 1$.\\Ou, si $\phi(n)=2n+1$, $v_n=u_{\phi(n)} = u_{2n+1} = -1$. 
 \end{enumerate}
+\end{rem}
 
-\lem Soit $(u_n)$ une suite de $\KK$. Alors : $u_n\to l$ $\Leftrightarrow$ pour toute suite $(v_n)$ extraite de $(u_n)$, $v_n\to l$
-
+\begin{lem} Soit $(u_n)$ une suite de $\KK$. Alors : $u_n\to l$ $\Leftrightarrow$ pour toute suite $(v_n)$ extraite de $(u_n)$, $v_n\to l$
+\end{lem}
 \begin{proof}\end{proof} .
 
-\thm[Théorème de \BW]
+\begin{thm}[Théorème de \BW]
 Soit $(u_n)$ une suite bornée (minorée et majorée). Il existe au moins une suite $(v_n)$ extraite de $(u_n)$ convergente.
-
+\end{thm}
 \section{Le critère de Cauchy}
-\inter
+\begin{inter}
 Le critère de Cauchy permet de montrer qu'une suite converge sans connaître sa limite et même sans savoir à priori s'il y en a une.
-
-\defi
+\end{inter}
+\begin{defi}
 Soit $(u_n)$ une suite de $\KK$. On dit que $(u_n)$ est une suite de Cauchy si :
 $$\forall \epsilon>0\,,\exists N\tq\forall\, p,\,q \text{~si~} p,\,q>N,\,|u_p-i_q|<\epsilon$$
-
-\prop
+\end{defi}
+\begin{prop}
 Si $(u_n)$ est convergente, $(u_n)$ est de Cauchy
+\end{prop}
 
 \begin{rem}
 Pour $\KK=\QQ$, prenons $\alpha_n\in\QQ\tq\alpha_n\to\sqrt{2}$. Alors, $(\alpha_n)$ est de Cauchy mais $\sqrt{2}\notin\QQ$ donc $(\alpha_n)$ ne converge pas dans $\QQ$ et la réciproque de Cauchy est fausse dans $\QQ$. C'est d'ailleurs la raison historique de la création de $\RR$
 \end{rem}
 
-\lem
+\begin{lem}
 Toute suite de Cauchy est bornée
-
+\end{lem}
 \begin{proof}
 Soit $(u_n)$ une suite de Cauchy. On prend $\epsilon=1$. Il existe N tel que pout $p,\,q\geq N,\,|u_p-u_q|<1$ et notamment si $q=N$.
 
@@ -148,15 +161,16 @@ Soit $M$&=&$\max(u_0,u_1,\ldots,u_{N-1},u_N+1)$\\
 Alors, $M$ majore $(u_n)$ et $m$ minore $(u_n)$
 \end{proof}
 
-\lem
+\begin{lem}
 Soit $(u_n)$ une suite de Cauchy telle qu'il existe une sous suite convergente $(u_{\phi(n)})$ ou $(v_n)$, alors $(u_n)$ converge.
-
+\end{lem}
 \begin{proof}
 
 \end{proof}
 
-\thm[Théorème de Cauchy]
+\begin{thm}[Théorème de Cauchy]
 Pour $\KK = \CC\text{~ou~}\RR$. Soit $(u_n)$ une suite de $\KK$.\\
 \begin{center}
 	$(u_n)$ converge $\Leftrightarrow$ $(u_n)$ est de Cauchy
 \end{center}
+\end{thm}

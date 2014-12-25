@@ -1,0 +1,127 @@
+\chapter{Séries}
+\section{Definition et premières propriétés}
+
+\begin{defi}
+Une série est une \emph{suite} $(S_n)$ telle qu'il existe $(u_n)$ avec $S_n = \sum\limits_{h=0}^{n}u_k$. Dans ce cas, $u_k$ est appelé terme général de la série.
+\end{defi}
+\begin{rem}
+	Une série peut aussi être définie avec $k>0$.
+\end{rem}
+\begin{nota}
+	$(S_n)$ est notée $\sum u_k$ ou $\sum\limits_{k>x} u_k$ où $x$ est le premier indice pris en compte pour le calcul de $(S_n)$.
+\end{nota}
+
+Deux problèmes se posent alors :
+\begin{itemize}
+	\item Les séries convergent-elles ? Lorsque c'est le cas, on note $\sum\limits_{k=x}^{\infty} = \lim\limits_{\pinfty}S_n$
+	\item Si elles convergent, comment calculer leurs limites ?
+\end{itemize}
+
+\begin{prop}
+$\sum u_k$ converge si et seulement si :
+$$\forall\epsilon>0,\exists N\tq\forall p,q,~~q>p\geq N, \left|\sum\limits_{k=p+1}^q u_k\right| <\epsilon$$
+\end{prop}
+
+\begin{proof}
+$S_q-S_p = \sum\limits_{k=p+1}^q u_k$ puis utilisation du critère de Cauchy.
+\end{proof}
+
+\begin{prop} \label{Serie_prop_CV}
+Si $\sum u_k$ converge, alors $u_k\to0$.
+\end{prop}
+
+\begin{rem}
+La propriété \ref{Serie_prop_CV} s'utilise plutôt sous la forme $u_k\nrightarrow0$ alors $\sum u_k$ diverge. \emph{Attention : la réciproque est fausse, on peut avoir $u_k\to0$ et $\sum u_k$ divergent.}
+\end{rem}
+
+\section{Séries à termes positifs}
+On cherche à trouver des critères permettant d'assurer la convergence d'une série.
+
+Dans cette section, on supposera que $(u_n)$ est une suite telle que pour tout $n$, $u_n\geq0$
+
+\begin{rem}
+Pour toute série $(S_n)$, on a $S_{k+1}-S_k = u_{k+1}\geq0$ donc $S_{k+1}\geq S_k$ pour tout $k$. Donc $(S_n)$ est croissante. Pour que cette série converge, il suffit donc qu'elle soit majorée.
+\end{rem}
+
+\begin{prop}[Comparaison série-intégrale]
+Soit $f=]0;\pinfty[\to\RR$ continue, décroissante et positive. Alors, $(S_n) = \sum\limits_k f(k)$ converge si et seulement si $\lim\limits_{x\to\pinfty}\int\limits_0^x f(t)\,\der t$ existe.
+\end{prop}
+\begin{proof}\end{proof}
+
+\begin{prop}[Critères de convergence]
+Soit $(u_n)$ et $(v_n)$ deux suites \emph{positives}. Soit $i\in\NN$
+\begin{enumerate}
+	\item Si il existe $i$ tel que $0 \geq u_i \geq v_i$ alors si $\sum\limits_{k=i}^\infty v_k$ converge alors $\sum\limits_{k=i}^\infty u_k$ converge. (\textsc{Comparaison})
+	\item Si $u_n=\oo(v_n)$ alors si $\sum v_k$ converge, $\sum u_k$ converge. (\textsc{Négligeabilité})
+	\item Si $u_n\sim_\infty v_n$ et si $\sum v_k$ converge, alors $\sum u_k$ converge. (\textsc{Équivalence})
+\end{enumerate}
+\end{prop}
+
+\begin{prop}[Règle de Riemann]
+Soit $(u_n)$ positive telle qu'il existe $\alpha > 1$ tel que
+$$n^\alpha u_n\to0$$
+alors $\sum u_k$ converge.
+\end{prop}
+
+\begin{prop}[Critères de Cauchy et d'Alembert]
+Soit $(u_n)$ une suite positive.
+On suppose que $\frac{u_{n+1}}{u_n}\to l$ (d'Alembert) ou que $\sqrt[n]{u_n}=u^{\frac{1}{n}}_n=l$ (Cauchy)
+Alors,
+\begin{itemize}
+	\item Si $l<1$, la série $\sum u_k$ converge.
+	\item Si $l>1m$, la série $\sum u_k$ diverge.
+\end{itemize}
+\end{prop}
+
+\begin{rem}
+Si $l=1$, on ne peut rien conclure.
+\end{rem}
+\begin{rem}
+Il faut vraiment calculer la valeur de la limite.
+\end{rem}
+\section{Séries à termes quelconques}
+\paragraph{Problème :} $\sum\limits_{k=0}^n u_k$ n'est plus croissante donc tous les critères tombent à l'eau...
+
+\subsection{Convergence absolue}
+\begin{thm}
+Si $\sum|u_k|$ converge, alors $\sum u_k$ converge. Attention, la réciproque est fausse.
+\end{thm}
+\begin{defi}~
+\begin{enumerate}
+	\item Une série telle que $\sum |u_k|$ converge est dite "absolument" convergente.
+	\item Une série convergente mais non absolument convergente est dite "semi-convergente". 
+\end{enumerate}
+\end{defi}
+
+\subsection{Critère d'Abel}
+Soit $(S_n)$ une série de la forme $\sum u_kv_k$ où $(u_n)$ et $(v_n)$ appartiennent à $\KK$.
+
+\begin{lem}[Transformation d'Abel]
+Soient $(u_n)$ et $(v_n)$ appartenant à $\KK$. On pose $B_n=\sum\limits_{k=0}^nv_k$ alors on a :
+$$S_n = u_nB_n-\sum\limits_{k=0}^{n-1}(u_{k+1}-u_k)B_k$$
+\end{lem}
+\begin{rem}
+Cette égalité est appelée "sommation par partie".
+\end{rem}
+
+\begin{thm}[Critère d'abel]
+Soient $(u_n)$ et $(v_n)$ deux suite stelles que :
+\begin{enumerate}
+	\item $B_n=\sum\limits_{k=0}^nv_k$ est bornée.
+	\item La série $\sum|u_{n+1}-u_n|$ converge.
+	\item $u_n\to0$
+\end{enumerate}
+Alors $\sum u_kv_k$ converge.
+\end{thm}
+
+
+\begin{rem}\end{rem}
+
+\begin{coro}
+Si $(u_n)$ est monotone, $u_n\to0$ et $\sum B_n$ bornée, alors $\sum u_nv_n$ converge.
+\end{coro}
+\begin{coro}[Critère de Liebnitz]
+Si on a une suite $(u_n)$ décroissante et tendant vers 0, alors la série $\sum (-1)^nu_n$ converge.
+\end{coro}
+
+

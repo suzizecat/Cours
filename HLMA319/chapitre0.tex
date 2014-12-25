@@ -1,33 +1,35 @@
 \chapter{Comparaison de fonctions et développements limités}
 \section{Négligeabilité  et équivalence}
 
-\defi
+\begin{defi}
 Soit $a\in\RR$. Un voisinage de $a$ est un intervalle de la forme $]a-\delta;a+\delta[$ ou $]a-\delta;a+\delta[~/\{0\}$ avec $\delta>0$
+\end{defi}
 
-\defi[Négligeabilité]
+\begin{defi}[Négligeabilité]
 Soit $f,g:\II\subset\RR \to \RR$ deux fonctions.\\
 On dit que $f$ est négligeable devant $g$ en $a\in\RR$ s'il existe un voisinage $\VV$ de $a$ et une fonction $\epsilon:\VV\to\RR$ telle que :
 \begin{itemize}
 	\item $f(x) = g(x)\epsilon (x)$ pour $x\in \VV$
 	\item $\lim\limits_{a}\epsilon(x)=0$
 \end{itemize}
+\end{defi}
 
-\nota
+\begin{nota}
 Si $f$ est négligeable devant $g$, on note $f \ll_{a}g$ (Physique) ou $f=o_a(g)$ (Maths)
-
-\rem
+\end{nota}
+\begin{rem}
 Si $g$ ne s'annule pas sur $\VV$, $f \ll_a g \Leftrightarrow \lim\limits_{x\to a}\frac{f(x)}{g(x)}=0$
+\end{rem}
+\begin{expl}
+\end{expl}
 
-\expl
-
-
-\defi[Équivalence]
+\begin{defi}[Équivalence]
 Soit $f,g:\II\subset\RR \to \RR$ deux fonctions. Soit $a\in\RR$.\\
 On dit que $f$ est équivalente à $g$ en $a$ si on a :
 $$f(x) = g(x) + o_a(g(x))$$
 C'est à dire si $f=g+$ quelque chose de négligeable devant $g$.
-
-\rem
+\end{defi}
+\begin{rem}
 \begin{eqnarray*}
 		f(x) &=& g(x) + o_a(g(x))\\
 		\Leftrightarrow f(x) & = & g(x) + g(x)\epsilon(x)\\
@@ -36,70 +38,82 @@ C'est à dire si $f=g+$ quelque chose de négligeable devant $g$.
 		\Leftrightarrow \lim\limits_a\frac{f(x)}{g(x)} &=& 1\\
 \end{eqnarray*}itemize
 Les deux dernières notations ne sont valides que si $g\neq 0$ au voisinage de $a$. $\epsilon$ est une fonction telle que $\lim\limits_a\epsilon=0$ 
+\end{rem}
 
-\nota
+\begin{nota}
 $f$ est équivalente à $g$ en $a$ s'écrit $f\sim_{a}g$
-
-\rem
+\end{nota}
+\begin{rem}
 Si $f\sim_{a}g$ et $\lim\limits_ag=l$ alors,
 \begin{eqnarray*}
 		\lim\limits_a f(x) &=& \lim\limits_a g(x) *\lim\limits_a(1+\epsilon(x))\\
 		& = & \lim\limits_a g(x)\\
 		&=&l\\
 \end{eqnarray*}
+\end{rem}
 
-\propo{}
+\begin{propo}{}
 Si $f\sim_ag$ et si $\lim\limits_ag$ existe, alors $\lim\limits_af=\lim\limits_ag$. \emph{Attention : la réciproque est fausse~!}
+\end{propo}
+\begin{proof}\end{proof}
 
-\begin{proof}\end{proof}{}
-\expl.
+\begin{expl}\end{expl}
 
 \section{Développements limités}
-\idee
+\begin{idee}
 On va faire l'approximation de fonctions par des polynômes.
-
-\defi
+\end{idee}
+\begin{defi}
 Soit $f:\II \subset \RR \to \RR$ et $a\in \II$.\\
 On dira que $f$ admet un développement limité d'ordre $n$ en $a$ (noté $DL_n(a)$) s'il existe un polynôme $P$ de degré $n$ tel qu'au voisinage de a,
 $$f(x) = P(x-a) + o_a((x-a)^n)$$
+\end{defi}
 
-\rem
+\begin{rem}
 On a $f(x+a) = P(x) + o_0(x^n)$ donc on fera les développements limités en 0
+\end{rem}
 
-\prop{}
+\begin{prop}
 Si $f$ admet un $DL_n(0)$ alors, de développement limité est unique.
+\end{prop}
 
 \begin{proof}\end{proof}
-\expl
 
-\thm{Formule de Taylor}
+\begin{expl}\end{expl}
+
+\begin{thm}{Formule de Taylor}
 Soit $f$ définie au voisinage de 0 et de classe $\CCr^n$ ($n$ fois dérivable avec $f^{(n)}=\frac{d^nf(0)}{dx^n}$ continue). On a :
 $$f(x)=\sum_{k=0}^n{\left(\frac{f^{(n)}(0)}{k!}x^k\right)}+o(x^n)$$
+\end{thm}
 
-\begin{proof}\end{proof}
-Voire Wikipédia.
+\begin{proof}Voir Wikipédia.\end{proof}
 
-\coro
+
+\begin{coro}
 Si $f$ est $\CCr^n$ alors elle admet un $DL_n(0)$
-
-\expl
+\end{coro}
+\begin{expl}
 Posons $f(x)=e^x$. $\forall n,f(x)^{(n)} = e^x$ et $f(0)^{(n)} = 1$. On a donc
 $$e^x = \sum_{k=0}^n{\frac{1}{k!}x^n}+o(x^n)$$
 Soit
 \[e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots+\frac{x^n}{n!}+o(x^n)\]
+\end{expl}
 
-\rem
+\begin{rem}
 C'est \emph{LA} bonne définition de $e^n$.
+\end{rem}
 
-\expl
+\begin{expl}\end{expl}
 
-\rem
+\begin{rem}
 Taylor c'est bien, mais parfois très complexe (par exemple le $DL_{10}(0)$ de $\frac{1+x}{1-x^2}$
+\end{rem}
 
-\rem
+\begin{rem}
 Un développement limité est une \emph{égalité} et non une approximation.
+\end{rem}
 
-\prop[Opérations sur les $DL$ :]
+\begin{prop}[Opérations sur les $DL$ :]
 Soit $f$ et $g$ deux fonctions. Admettons un $DL_n(0)$ tel que :
 \begin{itemize}
 	\item $f(x)=P(x)+o(x^n)$
@@ -113,6 +127,8 @@ Avec $\deg P =\deg Q=n$. On a alors :
 	\item[Dérivation :] Si $f$ est dérivable, $f'(x) = P'(x) + o(x^{n-1})$
 	\item[Intégration :]Si $f$ est continue, $F(x) = \int_0^x{f(t) dt} =\int_0^x{P(t)dt}+o(x^{n+1})$
 \end{description}
+\end{prop}
 
-\prop{}
+\begin{prop}
 Si $f(x) = P(x)+o(x^n)$ est un $DL_n(0)$ de $f$ avec $\deg P=n$, alors $P \sim_0 f$
+\end{prop}
