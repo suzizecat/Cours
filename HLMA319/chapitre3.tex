@@ -6,3 +6,76 @@ Soit $\II$ un intervalle de $\KK$ et $\BB(\II) = \{f:\II\to\KK,f\text{ bornée}\
 	La norme infinie de $f\in\BB(\II)$ est la valeur maximale que prend la valeur absolue de $f(x)$ pour $x\in\II$. Elle est notée
 	$$||f||_\infty=\sup\limits_{x\in\II}|f(x)|$$
 \end{defi}
+
+\begin{prop}~
+\begin{enumerate}
+	\item $||f(x)||_\infty = 0$ signifie que, pour tout $x$ appartenant à $\II$, $f(x)=0$
+    \item Pour $\lambda\in\KK$, $||\lambda f(x)||_\infty = |\lambda|*||f(x)||_\infty$.
+    \item $||f\circ g||_\infty \leq ||f||_\infty + ||g||_\infty$
+\end{enumerate}
+\end{prop}
+
+\begin{rem}
+La norme infinie dépend de l'ensemble $\II$ su lequel on travaille. S'il y a une ambiguïté, on écrira $||f(x)||_{\infty ,\II}$.
+\end{rem}
+
+\begin{expl}
+Si $\JJ$ appartient à $\II$, alors $||f(x)||_{\infty ,\JJ} \leq ||f(x)||_{\infty , \II}$
+\end{expl}
+
+\section{Convergence simple et convergence uniforme}
+Pour un intervalle $\II$ quelconque apartenant à $\KK$, on se donne une fonction $f$ telle que :
+\begin{center}
+\begin{tabular}{rr!{$\to$}l}
+f:&$\II$&$\KK$\\
+&$x$&$f_n(x)$
+\end{tabular}
+\end{center}
+
+\begin{defi}[Convergence simple]
+On dit que la suite $(f_n)$ converge \emph{simplement} vers $f:\II\to\KK$ si, pour tout $x$, on a :
+$$\lim\limits_{n\to\pinfty}f_n(x)=f(x)$$
+\end{defi}
+
+\begin{defi}[Convergence uniforme]\label{def_cvu}
+On dit que $(f_n)$ converge \emph{uniformément} si $f_n-f$ est bornée et si :
+$$\lim\limits_{n\to\pinfty}||f_n-f||_\infty = 0$$
+\end{defi}
+
+\begin{rem}
+Pour tout $x$ appartenant à $\II$ :
+$$0\leq |f_n(x)-f(x)|\leq \|f_n-f\|_\infty$$
+Donc, si on a convergence uniforme, alors on a convergencce simple.
+\end{rem}
+
+\begin{note}[Explications sur la convergence uniforme]
+L'expression donnée ci-dessous n'est pas toujours très claire. Pour détailler, on peut dire que :
+\begin{itemize}
+	\item Nous sommes en présence de deux variables : $n$ et $x$.
+    \item Lorsque l'on travaille sur \emph{la fonction $f(x)$}, la variable est $x$. Lorsque l'on travaille sur la suite $(f_n)$, la variable est $n$.
+    \item La notation $f(x)$ désigne $f_n(x)$ lorsque $n$ tend vers l'infini.
+\end{itemize}
+Si l'on explicite au maximum la définition \ref{def_cvu} de la convergence uniforme, on obtient ceci :
+
+On dit que la suite $(f_n(x))$ converge uniformément si on a :
+$$\lim\limits_{n\to\infty}\left[\left\|f_n(x) - \lim\limits_{n\to\infty}\left[f_n(x)\right] \right\|_{\infty,\II} \right]=0$$
+Dans cette expression, la valeur de $x$ est en fait fixée. En effet, l'utilisation de la norme infinie force une (ou des) valeurs de $x$ pour lesquelles l'expression $f_n-f$ est maximale. 
+
+La convergence uniforme montre que, pour une suite de fonction donnée et pour une valeur de $x$ telle que $f_n(x) - f_\infty(x)$ est maximal, lorsque $n$ tend vers l'infini, $f_n$ tend vers $f_\infty$, indépendament de $x$.
+
+On peut donc dire que la convergence uniforme est la généralisation de la convergence simple à un intervalle $\II$ donné.
+\end{note}
+
+\begin{note}[Détermination d'une convergence uniforme]
+Pour déterminer si une suite de fonction converge uniformément, il faut :
+\begin{enumerate}
+	\item Trouver une borne maximale, notée $\epsilon(n)$ à l'expression $|f_n(x)-f(x)|$. Cette borne doit dépendre de $n$
+    \item Montrer que $\lim\limits_{n\to\infty}\epsilon(n) = 0$ indépendament des valeurs de $x$
+\end{enumerate}
+\end{note}
+
+\begin{prop}[Critère de Cauchy uniforme]
+$(f_n)$ converge uniformément si elle est uniformément de Cauchy
+$$\forall\epsilon>0,\exists N \tq \forall p,\,q\,,\,p,q\geq N \Rightarrow \|f_p-f_q\|_\infty < \epsilon$$
+\end{prop}
+
