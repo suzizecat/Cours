@@ -1,8 +1,8 @@
 \chapter{Séries}
-\section{Définition et premières propriétés}
+\section{Definition et premières propriétés}
 
 \begin{defi}
-Une série est une \emph{suite} $(S_n)$ telle qu'il existe $(u_n)$ avec $S_n = \sum\limits_{k=0}^{n}u_k$. Dans ce cas, $u_k$ est appelé terme général de la série.
+Une série est une \emph{suite} $(S_n)$ telle qu'il existe $(u_n)$ avec $S_n = \sum\limits_{h=0}^{n}u_k$. Dans ce cas, $u_k$ est appelé terme général de la série.
 \end{defi}
 \begin{rem}
 	Une série peut aussi être définie avec $k>0$.
@@ -34,7 +34,7 @@ Si $\sum u_k$ converge, alors $u_k\to0$.
 La propriété \ref{Serie_prop_CV} s'utilise plutôt sous la forme $u_k\nrightarrow0$ alors $\sum u_k$ diverge. \emph{Attention : la réciproque est fausse, on peut avoir $u_k\to0$ et $\sum u_k$ divergent.}
 \end{rem}
 
-\section{Séries à termes positifs}
+\section{Séries à termes positifs}\label{serie_th_pos}
 On cherche à trouver des critères permettant d'assurer la convergence d'une série.
 
 Dans cette section, on supposera que $(u_n)$ est une suite telle que pour tout $n$, $u_n\geq0$
@@ -123,5 +123,3 @@ Si $(u_n)$ est monotone, $u_n\to0$ et $\sum B_n$ bornée, alors $\sum u_nv_n$ co
 \begin{coro}[Critère de Liebnitz]
 Si on a une suite $(u_n)$ décroissante et tendant vers 0, alors la série $\sum (-1)^nu_n$ converge.
 \end{coro}
-
-

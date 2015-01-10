@@ -79,3 +79,89 @@ $(f_n)$ converge uniformément si elle est uniformément de Cauchy
 $$\forall\epsilon>0,\exists N \tq \forall p,\,q\,,\,p,q\geq N \Rightarrow \|f_p-f_q\|_\infty < \epsilon$$
 \end{prop}
 
+\section{Inversion des bornes d'integrales}
+\section{Convergence uniforme sur tout compact}
+\begin{defi}[Approximation]
+Un compact peut être considéré comme un intervalle borné $[a;b]$.
+\end{defi}
+\begin{nota}
+On note la Convergence Uniforme sur tout Compact CVUK.
+\end{nota}
+
+\begin{defi}[Convergence uniforme sur tout compact]
+Soit $f_n:\II\to\KK$ une suite de fonctions. On dit que $f_n$ converge uniforméménet sur tout compact vers $f:\II\to\KK$ si pour tout intervalle $[a;b]\subset\II$, la suite $f_n$ converge uniformément vers $f$ en $[a;b]$
+\end{defi}
+\begin{prop}
+	\begin{enumerate}
+		\item Si $f_n\toCVUK\KK$
+		\item Si $f_n$ est $\CCr^1$, $f_n(x_0)\to\alpha$ et si $f'_n\toCVUK g$ alors il existe $f$, $f_n\toCVUK f$ et $f'=g$
+	\end{enumerate}
+\end{prop}
+
+\begin{rem}
+	CVU $\underset{\nLeftarrow}{\Rightarrow}$ CVUK $\underset{\nLeftarrow}{\Rightarrow}$ continuité
+\end{rem}
+
+\section{Séries de fonctions}
+\begin{defi}
+Une série de fonction est une suite de fonctions $S_n:\II\to\KK$ telle qu'il existe une suite de fonctions $(u_n):\II\to\KK$ avec $S_n(x)=\sum\limits_{k=0}^{n}u_k(x)$
+\end{defi}
+\begin{rem}[Conséquence immédiate]
+	Tout le début du chapitre s'applique aux séries de fonctions. Cependant, quels sont les critères permetant de déterminer la convergence de $S_n$ ?
+\end{rem}
+\begin{propo}
+	Si $S_n$ converge uniformément, alors $u_k$ converge uniformément vers 0.
+\end{propo}
+\begin{proof}
+\end{proof}
+Il y a deux critères impliquant la convergence uniforme :
+\subsection{Convergence normale}
+\begin{defi}
+On dit que $S_n$ converge normalement\footnote{Convergence normale : CVN} si la série $\sum\|u_k\|_\infty$ converge.
+\end{defi}
+
+\begin{inter}
+Les séries de type $\sum\|u_n\|_\infty$ sont des séries à termes positifs. Tous les critères vus en partie \ref{serie_th_pos} sont donc valides.
+\end{inter}
+\begin{thm}
+La convergence normale d'une série entraine sa convergence uniforme. C'est à dire :
+ si $\sum\|u_k\|_\infty$, alors $\sum u_k(x)$ converge uniformément.
+\end{thm}
+
+\begin{proof}\end{proof}
+
+\subsection{Critère d'Abel uniforme}
+\begin{thm}[d'Abel uniforme]
+Soient $u_n(x)$ et $v_n(x)$ deux suites de fonctions de $\II$ dans $\RR$ telles que :
+\begin{enumerate}
+	\item $u_n(x)$ converge uniformément vers 0.
+	\item $\sum\|u_{n+1}-u_n\|_\infty$ converge.
+	\item $B_n(x)=\sum\limits_{p=0}^nv_p(x)$ est uniformément bornée\footnote{C'est à dire qu'il existe un réel $M$ tel que pour tout $x$ et tout $n$, $|B_n(x)|>M$}.
+\end{enumerate}
+Alors $\sum\left[u_n(x)*v_n(x)\right]$ converge uniformément.
+\end{thm}
+
+\section{Fonction $\zeta$}
+\begin{defi}
+Soit $z\in\CC$. La fonction $\zeta(z)$ est définie par :
+$$\zeta(z)=\sum\limits_{n=1}^\infty \frac{1}{n^z}$$
+\end{defi}
+\begin{note}
+Ici, $z$ est un nombre fixé. La fonction $\zeta$ est donc bien une fonction au sens courant du terme et sa valeur ne dépend que de $z$.
+\end{note}
+\begin{propo}[Convergence de $\zeta$]
+ Si $\Re(z) > 1$, alors $\zeta(z)$ converge absolument. 
+\end{propo}
+\begin{proof}
+Notons que $z$ est de la forme $x+iy$. Si on travaille sur la valeur absolue, ou le module dans l'ensemble des complexes, on obtient :
+\begin{eqnarray}
+	\left|\frac{1}{n^z}\right| &=&\left|\frac{1}{e^{z\ln(n)}}\right|\nonumber\\
+	&=&\left|\frac{1}{e^{x\ln(n)}e^{iy\ln(n)}}\right|\label{complx_complet}\\
+	&=&\frac{1}{e^{x\ln(n)}}\label{complx_simple}\\
+	&=&\frac{1}{n^x}\nonumber\\
+	&=&\frac{1}{n^{\Re(z)}}\label{eq_fin}
+\end{eqnarray}
+Notons que, pour le passage de l'équation \eqref{complx_complet} à l'équation \eqref{complx_simple}, on utilise le fait que le module d'un complexe de la forme $ae^{i\theta}$ vaut $a$ avec ici $a=e^{x\ln(n)}$.
+
+On déduit de l'équation \eqref{eq_fin} que $\zeta$ converge absolument.
+\end{proof}
