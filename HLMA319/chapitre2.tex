@@ -31,7 +31,7 @@ Si $\sum u_k$ converge, alors $u_k\to0$.
 \end{prop}
 
 \begin{rem}
-La propriété \ref{Serie_prop_CV} s'utilise plutôt sous la forme $u_k\nrightarrow0$ alors $\sum u_k$ diverge. \emph{Attention : la réciproque est fausse, on peut avoir $u_k\to0$ et $\sum u_k$ divergent.}
+La propriété \ref{Serie_prop_CV} s'utilise plutôt sous la forme $u_k\nrightarrow0$ alors $\sum u_k$ diverge. \emph{Attention~: la réciproque est fausse, on peut avoir $u_k\to0$ et $\sum u_k$ divergent.}
 \end{rem}
 
 \section{Séries à termes positifs}\label{serie_th_pos}
@@ -47,7 +47,13 @@ Pour toute série $(S_n)$, on a $S_{k+1}-S_k = u_{k+1}\geq0$ donc $S_{k+1}\geq S
 Soit $f=]0;\pinfty[\to\RR$ continue, décroissante et positive. Alors, $(S_n) = \sum\limits_k f(k)$ converge si et seulement si $\lim\limits_{x\to\pinfty}\int\limits_0^x f(t)\,\der t$ existe.
 \end{prop}
 \begin{proof}\end{proof}
-
+\begin{prop}[Series de Riemann]
+Les séries de terme général $\frac{1}{n^\alpha}$ (séries de Riemann) sont :
+\begin{itemize}
+	\item convergentes si $\alpha>1$,
+	\item divergentes si $\alpha<1$.
+\end{itemize}
+\end{prop}
 \begin{prop}[Critères de convergence]
 Soit $(u_n)$ et $(v_n)$ deux suites \emph{positives}. Soit $i\in\NN$
 \begin{enumerate}
@@ -57,11 +63,11 @@ Soit $(u_n)$ et $(v_n)$ deux suites \emph{positives}. Soit $i\in\NN$
 \end{enumerate}
 \end{prop}
 
-\begin{prop}[Règle de Riemann]
+\begin{appl}[Règle de Riemann]
 Soit $(u_n)$ positive telle qu'il existe $\alpha > 1$ tel que
 $$n^\alpha u_n\to0$$
 alors $\sum u_k$ converge.
-\end{prop}
+\end{appl}
 
 \begin{prop}[Critères de Cauchy et d'Alembert]
 Soit $(u_n)$ une suite positive.
