@@ -1,0 +1,18 @@
+\chapter{Opérateurs}
+\section{Opérateurs sur les vecteurs}
+\subsection{Rotationnel}
+Le rotationnel d'un vecteur $\vec{U}$ est un vecteur. En coordonnées cartésiennes, on a :
+\[
+\Rot\vec{U} = \left(
+\begin{array}{c}
+	-\frac{\partial U_y}{\partial y} + \frac{\partial U_z}{\partial z}\\
+	-\frac{\partial U_z}{\partial z} + \frac{\partial U_x}{\partial x}\\
+	-\frac{\partial U_x}{\partial x} + \frac{\partial U_y}{\partial y}\\
+\end{array}
+\right)
+\]
+\subsection{Laplacien}
+On définit à partir de la divergence et du gradient, le Laplacien, noté $\Delta$ avec :
+\[
+\Delta f(x,y,z) = \Div(\grad f)= \frac{\partial^2f}{\partial x^2} + \frac{\partial^2f}{\partial y^2} + \frac{\partial^2f}{\partial z^2}
+\]

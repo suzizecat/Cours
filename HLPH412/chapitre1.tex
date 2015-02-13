@@ -1,0 +1,100 @@
+\chapter{Les équations de Maxwell}
+\section{Introduction}
+
+Ces équations sont déterminées en 1865, après les lois expérimentales de l'électrostatique (1785) de Coulomb et celles de la magnétostatique (1820) par Biot et Savart.
+
+Les équations de Maxwell sont des équations locales qui couplent les champs électriques ($\vec{A}$) et magnétiques ($\vec{B}$). Ce couplage est effectif en dynamique (c'est à dire qu'il dépend du temps). En tout point de l'espace, on a toujours :
+\begin{center}
+	\begin{tabular}{r @{=} lr @{=} l}
+	$\Div \vec{E}$&$\frac{\rho}{\epsilon_0}$ & $\Div \vec{B}$&$0$\\
+	$\Rot \vec{E}$&$-\frac{\partial\vec{B}}{\partial t}$ & $\Rot \vec{B}$&$\mu_0\vec{j}+\epsilon_0\mu_0\frac{\partial\vec{E}}{\partial t}$
+	\end{tabular}
+\end{center}
+où $\rho(x,y,z)$ est la densité volumique de charges et où $\vec{j}(x,y,z)$ est la densité volumique de courant.
+
+Les équations de Maxwell relient les champs et leurs sources. Ces quatre équations décrivent totalement tout l'électromagnétisme. Notons que l'électromagnétisme est une des quatre forces fondamentales avec la gravité et et les interactions fortes et faibles.
+
+\section{Charges et courants}
+\subsection{Densités de charges}
+
+On définit la densité volumique de charge par $\rho(\vec{r})=\frac{\delta q}{\delta\tau}$. La charge $Q$ contenue dans le volume $v$ est :
+\[
+	Q=\iiint\limits_{v}\rho(\vec{r}) \der\tau
+\]
+Si $\rho$ est constant, on a alors $Q=\rho\iiint\limits_v\der\tau = \rho v$ 
+
+On définit également :
+\begin{itemize}
+	\item $\sigma$ la distribution surfacique de charges
+	\item $\lambda$ la distribution linéique de charges
+\end{itemize}
+\subsection{Densités volumique de courant}
+Un courant est un déplacement de charges. On définit $\vec{j}=\rho\vec{v}$. Cette expression est similaire à celle d'un débit. 
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{5cm}
+	\input{1_2_2_charges_general.pdf_tex}
+	\caption{Conducteur cylindrique}
+\end{figure}
+\subsection{Conductivité}
+Un matériau est dit conducteur s'il permet le déplacement des charges dans le cas contraire, on parle d'isolant.
+
+Les semi-conducteurs sont des matériaux facilement transformables en isolants ou en conducteurs.
+
+La conductivité est la grandeur qui lie la cause ($\vec{E}$) et l'effet ($\vec{j}$) \textit{via} la loi d'Ohm locale~:~$\vec{j}=\gamma\vec{E}$ où $\gamma$ est la conductivité.
+
+\section{Équation $\Rot\vec{E} = - \frac{\partial \vec{B}}{\partial t}$ en régime statique}
+En statique, on a $ \frac{\partial \vec{B}}{\partial t} = 0$. La relation $\Rot\vec{E} = - \frac{\partial \vec{B}}{\partial t}$ devient donc $\Rot\vec{E}=0$. Cette relation implique qu'il existe une fonction $V$ telle que $\vec{E} = -\grad V$. C'est un théorème mathématique.
+
+\subsection{Surfaces équipotentielles}
+\begin{defi}
+	On appelle \emph{surface équipotentielle} toute surface sur laquelle $v(x,y,z)$ est une constante.
+\end{defi}
+Le champ électrique $\vec{E}$ est toujours orthogonal à ces surfaces.
+
+\subsection{Conductivité et résistance}
+Soit un fil conducteur (Figure \ref{conduct_cyl}). Dans ce cas, la différence de potentiel vaut $v(l)-v(0)$.
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{10cm}
+	\vspace{0.5cm}
+	\input{1_2_3_conductivite.pdf_tex}
+	\caption{Conducteur cylindrique}
+	\label{conduct_cyl}
+\end{figure}
+De plus, si le champs $\vec{E}$ est uniforme, alors les surfaces équipotentielles sont les sections perpendiculaires au fil et on a :
+\[
+\frac{v(0)-v(L)}{L}=E
+\]
+De plus, si on calcule le courant $I$, on a : 
+\[
+I =\iint\gamma\vec{E}\circ\der\vec{S} = \gamma ES
+\]
+Donc on a l'expression $I=\gamma S*\frac{v(0)-v(l)}{L}$ soit $v(0)-v(L) = \left(\frac{1}{\gamma}\frac{L}{S}\right) I$
+On en déduit que $R=\frac{L}{\gamma S}$ où $R$ est la résistance, exprimée en ohm ($[\Omega] = S^{-1}.m^{-1}$)
+
+\subsection{Métal parfait}
+Un métal parfait est un métal tel que $\gamma\approx+\infty$. Pour avoir un courant $\vec{j}$ fini, on a $\vec{E} = \vec{0}$ dans le conducteur. La conséquence est que le métal parfait est une équipotentielle.
+
+\subsection{\'Energie $E$ électrostatique}
+Pour une charge $q$ placée dans un potentiel $V$, l'expression de l'énergie électrostatique est
+\[E=qV\]
+De plus, à l'infini, $v(\infty)=0$.
+
+Si on prend une particule chargée se déplaçant d'un point $A$ à un point $B$, pour laquelle on contre parfaitement la force de Coulomb $\vec{F}=q\vec{E}$ en tout point du trajet.
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{10cm}
+	\vspace{0.5cm}
+	\input{1_2_3_4_energie_elec.pdf_tex}
+	\caption{Déplacement d'une charge dans un champ $\vec{E}$}
+	\label{ener_elec}
+\end{figure}
+On obtient, sachant que $E_p(\infty)=0$ car $V(\infty)=0$, $E_p(B)=W(\text{operateur}) = W(\vec{F_\text{operateur}}$ donc $E_p(B)=-qV(B)$
+
+\section{\'Equation $\Div\vec{E}=\frac{\rho}{\epsilon_0}$}
+On sait à présent qu'il existe une fonction $V$ telle que $E=-\grad V$. Donc, $\Div\vec{E}=-\Div(\grad V) = -\lapla V$. Or, on a l'équation de Maxwell $\Div\vec{E}=\frac{\rho}{\epsilon_0}$ donc on a :
+\[\lapla V=-\frac{\rho}{\epsilon_0}\]
+Ce résultat est appelé équation de Poisson. Pour des conditions limites fixées, cette équation admet une unique solution
+\[V(r)=\frac{q}{4\pi\epsilon_0r}\]
+dans le cas où on considère une unique charge.
